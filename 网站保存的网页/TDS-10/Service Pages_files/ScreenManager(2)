@@ -1,0 +1,1 @@
+document.write('<p><a href=\'/servlet/ScreenManager?command=axis_controller_links_page\'><font face=\'Arial,Helvetica,sans-serif\'>Axis Controllers</font></a></p>');

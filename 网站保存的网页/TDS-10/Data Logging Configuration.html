@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://192.168.31.25/page/help/data_logging/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Data Logging Configuration</title>
+        
+        <script type="text/javascript" src="./Data Logging Configuration_files/ieupdate.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Data Logging Configuration_files/blue_bar.css">
+    </head>
+    <body>
+        <div id="blue_bar">
+            <span id="blue_bar_title">Documentation: Data Logging Configuration - <script language="JavaScript" type="text/javascript" src="./Data Logging Configuration_files/AdminServlet"></script>Top Drive</span>
+            <span id="right_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+        <div>
+            <h2>How the Controller Logs Data</h2>
+            <p>The controller continuously runs through a periodic loop during 
+                which it reads all inputs, processes instructions, updates data 
+                values, and refreshes all outputs. This cycle typically takes 
+                place once every 20 milliseconds, or 500 times per second. When 
+                logging data, the controller always collects data once per 
+                cycle.</p>
+            <p>The data logging system is designed to log 32-bit floating point 
+                numbers exclusively. This means that it is capable of logging 
+                integers as well, by simply converting them to floating-point 
+                numbers. But this gives it a consistent size for every number 
+                that it logs, and this consistency allows the controller to 
+                more easily manage the data.</p>
+            <p>If the controller were to log one 32-bit number for each of 100 
+                data points every 20 milliseconds, then in one hour, it would 
+                collect about 687 Mb of data. On rigs, we would like to collect 
+                data over periods of days (16.5 Gb per day) or weeks (113 Gb 
+                per week) or years (5,858 Gb per year). </p>
+            <p>That is a lot of data for not very many data points. Ideally, 
+                we would like to log all the data points on a controller, 
+                and there can be tens of thousands. We need to be able to 
+                store a useful amount of data on our compact flash cards—at 
+                least a day or two’s worth of data. The compact flash 
+                specification allows for petabytes of data, but practically 
+                speaking, we need to use the flash cards that we can buy on 
+                the market, and these are usually up to about 128 Gb, but 
+                are more commonly about 32 Gb.</p>
+            <p>Beyond the problem of where to put the data, there is also the 
+                problem of getting it off of the flash card. We want to be able 
+                to look at the data in the user interface. We would like to see 
+                trend graphs for various time periods. If we wanted to see five 
+                data points over a period of one hour, in the logging system 
+                above, we would have to transfer 34.3 Mb of data from the 
+                controller to the screen just to get a single screen-full 
+                of data. That would take several minutes. If we wanted to 
+                see the data updating once every second or so, we couldn’t do 
+                it. We wouldn’t be able to transfer that much data that fast.</p>
+            <p>For these reasons, the controller does not necessarily want to 
+                keep a data point every 20 milliseconds.</p>
+            <p>Instead, the controller data logging system is designed to 
+                compress data by averaging over arbitrary time intervals. 
+                Instead of one number for each data point, it actually keeps 
+                three: a minimum, a maximum, and an average. It still collects 
+                data every cycle (normally once every 20 milliseconds), but it 
+                only uses that data to fill in the average, maximum, and 
+                minimum for the time interval. If the time interval is one 
+                second, then each second of data is expressed as a minimum, 
+                maximum, and average of the 500 cycles that occurred in that 
+                second.</p>
+            <p>In many other data logging systems, it is common to log data 
+                once per second. Some systems actually take a data sample once 
+                per second, but there is a significant risk of missing an 
+                important event this way. In the Amphion data logging system, 
+                we get information about the extremes and the average for that 
+                second, so we can tell if a spike in the data occurred.</p>
+            <p>The time intervals over which we collect data can be arbitrary. 
+                We can collect data at one-second intervals, or one-hour 
+                intervals, or once every 200 milliseconds, or once every 20 
+                milliseconds (if we really want to). More than that, the data 
+                logging system is designed to be able to record over different 
+                intervals at the same time. So, we can record data points once 
+                per hour, and also once per second. This gives us two or more 
+                different sets of data for that same data point so that we can 
+                get coarse- and fine-grained data.</p>
+            <p>When we are trying to graph data from the data logging system 
+                in the operator screens, we ask to see data for an interval of 
+                time, and we specify how many points we would like to see. 
+                Based on these numbers, the data logging system can decide 
+                whether to give us the coarse or the fine data. It will give 
+                us whichever data set will fit our needs. This way, if we want 
+                to see two weeks’ worth of data, we can look at the hourly 
+                numbers (336 sets of numbers). But if we want to see thirty 
+                minutes of data, we can look at the one-second numbers (1,800 
+                sets of numbers). The operator will have to wait considerably 
+                less time for the data to get from the controller to the screen 
+                than if we had recorded numbers once every 20 milliseconds.</p>
+            <h2>Data Log Files</h2>
+            <p>The data logging system needs to save the logged data into files 
+                and is capable of breaking up the data into arbitrary chunks 
+                for storage. We can specify the number of “samples” that are 
+                written to any one data log file. The default is 3600. This 
+                means that if we have data being recorded at one-second 
+                intervals, we will get one “sample” per second. We would 
+                write a data file once every 3600 seconds, or once per hour. 
+                If we are recording data at 200 millisecond-intervals, then 
+                we would finish a data file once every twelve minutes.</p>
+            <p>Data is written to files continuously. That is, as the data is 
+                generated, it is written to the compact flash card. So, it’s 
+                possible to look at data log files and see the latest one 
+                become larger and larger. This helps to insure that we have 
+                data if there is ever a system crash. If the system stops 
+                abruptly, the file will be left open, but the data is probably 
+                recoverable when the system starts working again. And the data 
+                logging system is designed to look for unfinished files 
+                whenever it starts up.</p>
+            <p>Data files are stored in directories that correspond to the 
+                recording time interval. For example, all of the data logged 
+                at one-second intervals will be in the same directory, and it 
+                will be a different directory from the one that contains the 
+                data logged at one-hour intervals.</p>
+            <p>Data files have names that correspond to a time stamp. The time 
+                stamp records the time that the data log file was started. 
+                However, the time stamp is in computer-friendly time. Computers 
+                like to tell time by counting the number of milliseconds since 
+                the “dawn of time” (for computers) which is January 1, 1970. 
+                It is not a human-readable time. However, the reason why data 
+                log files are named this way is because it’s easier for the 
+                computer to find a file that contains a given time. It doesn’t 
+                have to spend time translating a human-readable time into 
+                something that it can understand. This is very useful when 
+                someone wants to look at the data from a six-hour interval 
+                that took place eight days ago (or something similar).</p>
+            <p>Data log files can also be automatically compressed into zip 
+                files. Compressed files take up significantly less space 
+                than raw data log files, which allows us to store more data. 
+                However, there is a penalty for this. The penalty is that once 
+                we take those files off of the rig network and try to look at 
+                them off-line, we have to decompress them before we can look 
+                at them.</p>
+            <p>The individual files themselves are not designed to be 
+                human-readable. Each file contains a header with information 
+                like the names of the data points (WebObjects) that are 
+                recorded in it, the time stamp when the file started, and some 
+                other useful information. The actual data is just fields of 
+                binary numbers packed in one after another without any 
+                separation. To find out where we are in the file, we have 
+                to calculate the location by counting the number of bytes 
+                from the start of the data area of the file. Each line of 
+                data starts with a time stamp, which is a 64-bit long integer 
+                (a time value) packed into a space of 96 bits. We actually do 
+                waste 32 bits in each line, but it makes the translation from 
+                byte arrays into meaningful numbers a lot easier. Following the 
+                time stamp, there are three 32-bit numbers for each data point: 
+                the minimum, maximum, and average. There is no separator 
+                between lines.</p>
+            <h2>Network Attached Storage (NAS)</h2>
+            <p>Compact flash cards are of limited size, and we would sometimes 
+                like to store data for longer periods of time than we have 
+                space for on the compact flash. It’s possible to attach a 
+                storage device to the Ethernet network to collect data 
+                log files.</p>
+            <p>Normally, as the data logging system runs out of room on the 
+                compact flash card, it will delete older files so that it has 
+                space to write new ones. But it can also be configured to move 
+                the older files to a network storage device before it deletes 
+                the local copy. This copying takes place using features of the 
+                Linux operating system that are designed to allow us to easily 
+                share files.</p>
+            <p>The data logging system on a controller keeps a “handle” to 
+                files on the network storage device so that it can retrieve 
+                them if necessary, for example if someone asks to see data in 
+                a time range that corresponds to a file that is no longer on 
+                the compact flash, but is on the network storage device.</p>
+            <h3>Configuring Data Logging</h3>
+            <p>The data logging configuration applet contains a number of 
+                fields. The data logging configuration is kept in a file on 
+                the controller at /varco/data/config/datalog_config.xml.</p>
+            <p><img src="./Data Logging Configuration_files/datalogconfig_01.png" width="900" height="600"></p>
+            <h3>Samples per File</h3>
+            <p>As mentioned above, the data logging system breaks up recorded 
+                data into chunks so that it can write each chunk into its own 
+                file. We measure the size of a file by counting how many time 
+                interval “samples” it contains. The default is 3600 samples per 
+                file. That means that every file will include 3600 time 
+                intervals, no matter what time interval is recorded in that 
+                file and no matter how many data points we are recording. If 
+                we are recording a minimum, maximum, and average of every data 
+                point once every 200 milliseconds, then each file will cover a 
+                time period of twelve minutes. If we are recording data once 
+                every second, then each file will cover a time period of one 
+                hour. A file with 100 data points recorded every 200 
+                milliseconds will be the same physical size on the disk 
+                as a file with 100 data points recorded every second.</p>
+            <p>This can make a difference when we try to look at the data 
+                offline. We can get a group of data log files from the data 
+                logging system and put them on our laptop. If we want to look 
+                at individual files to try to find an event, we might have to 
+                look at files where each one contains an hour of data, or we 
+                can look at files where each one contains only twelve minutes 
+                of data. The data in the twelve-minute files will be more 
+                fine-grained, but we might have to sift through more of them 
+                to find what we want.</p>
+            <h3>Network Attached Storage (NAS) IP Address</h3>
+            <p>We need a way to tell the data logging system that there is a 
+                NAS available and where to find it on the network. This value, 
+                and the other NAS-related values in the configuration do not 
+                set up the NAS. They only make it possible for the controller’s 
+                data logging system to find the NAS.</p>
+            <h3>NAS Share Directory</h3>
+            <p>This should be the base directory where we want individual 
+                controllers to save their data log files on the NAS. Each 
+                controller can be configured to write to a separate share 
+                directory on the NAS, but this is not necessary. When each 
+                controller writes data log files to the NAS, the controller 
+                create a directory for itself inside the share directory. 
+                This directory for itself will have a name that is the same 
+                as the controller’s screen tool name.</p>
+            <h3>NAS Timeout</h3>
+            <p>The controller will try to write each file to the NAS as needed, 
+                but there may be a communications problem that cannot be 
+                anticipated. If there is a problem transferring a file, 
+                then the controller will stop trying to write after some 
+                period of time specified by the NAS Timeout value.</p>
+            <h3>NAS Retransmission Interval</h3>
+            <p>If the controller cannot transmit a file to the NAS, then it 
+                will try again, and continue trying. The retransmission interval 
+                tells the controller how much time to wait between trying and 
+                trying again.</p>
+            <h3>Collect WebObjects of Type</h3>
+            <p>This allows us to configure a strategy for what data fields 
+                (WebObjects) to record in data logging files. As mentioned 
+                above, a controller can have tens of thousands of WebObjects. 
+                One strategy is to record them all (select “All” in the 
+                drop-down menu box).</p>
+            <p>Another strategy is to record the “priority” WebObjects (select 
+                “Priority” in the drop-down menu box). When this is selected, 
+                the data logging system will try to log all WebObjects, but at 
+                the same time, it will look at the CPU utilization. If the 
+                processor is showing signs of straining while logging 
+                everything, the data logging system will automatically 
+                downshift and stop logging everything. Instead, it will 
+                only log “essential” WebObjects. WebObjects that are considered 
+                essential include all I/O point values, several values from 
+                every motion profiler and axis controller (these are software 
+                constructs inside the controller intended to control parts of 
+                tools), and controller free memory and cycle time values.</p>
+            <p>However, the default strategy is to log “channels” (select 
+                “Channels” from the drop-down menu box). With this strategy, 
+                we need to specify the names of specific WebObjects to log. 
+                There is a separate configuration file that the data logging 
+                system uses to determine which channels to log. When using 
+                channels it is also possible to configure other, more 
+                user-friendly parameters for each channel, like units or range 
+                values. The data logging system doesn’t care about these, but 
+                they are used by the operator screens to make displays of 
+                graphed values easier to understand and work with.</p>
+            <h3>Logging Intervals</h3>
+            <p>As was mentioned above, the system compresses data collected 
+                once every controller cycle by maintaining a maximum, minimum, 
+                and average of the data collected during a time interval. We 
+                can specify the time intervals. A controller cycle is usually 
+                once every 20 milliseconds. If we set up a logging interval at 
+                200 milliseconds, then each time interval will keep the maximum, 
+                minimum, and average of 10 controller cycles.</p>
+            <p>We can actually specify a logging interval of 20 milliseconds, 
+                but then we would have a maximum, minimum, and average number 
+                for each controller cycle. That would give us three numbers, 
+                all with the same value, for each data point. This is not 
+                efficient. It would result in massive data files which would 
+                be difficult to work with.</p>
+            <p>In practice, it’s a good idea to make the interval some multiple 
+                of 20. We can specify an interval of 125 milliseconds, but the 
+                system might have a problem interpreting whether a controller 
+                cycle fell into one “sample” or another.</p>
+            <p>We cannot ask for an interval of less than 20 milliseconds.</p>
+            <p>However, we can specify multiple intervals. As was mentioned 
+                above, the data logging system is capable of logging in 
+                multiple intervals at the same time, and there is good 
+                reason to do so. We would do this to prevent ourselves 
+                from having difficulty (meaning, taking more time) when 
+                looking at data that needs to come from the controller to 
+                the operator screens. If we think we might be looking at a 
+                week’s worth of data in a single screen, then it would be 
+                better to specify a data logging interval that makes sense 
+                for that. By convention, a data logging trend screen in the 
+                operator screens can show 500 time intervals (simply because 
+                the trend area is 500 pixels wide) for each data point. One 
+                week is 604,800,000 milliseconds, so each of the 500 pixels 
+                can represent 1,209,600 milliseconds (20.16 minutes) of data. 
+                So, if we frequently look at data by the week, it makes sense 
+                to set up a data logging interval of 1,209,600 milliseconds.</p>
+            <h3>Compression Window</h3>
+            <p>The compression window is the amount of time, in hours after 
+                which data log files will be compressed into zip files. We can 
+                set this for each logging interval. If this value is set to -1, 
+                then data log files will not be compressed into zip files.</p>
+            <p><img src="./Data Logging Configuration_files/datalogconfig_02.png" width="900" height="600"></p>
+            <h3>Query Split between Intervals</h3>
+            <p>When the operator screens ask for data from the logging system, 
+                they will ask for some number of data points, usually 500, over 
+                some interval of time. This can be thought of as a data 
+                resolution, where we might need 500 points to show about 
+                three and a half hours of data. So, each data point would 
+                represent, in this example, about 25 seconds. If we happen 
+                to have a data interval of 25,000, then the data logging 
+                system will use that interval to fulfill the request, because 
+                that would be a perfect match. However, it might not be 
+                that easy.</p>
+            <p>Suppose we want 500 points to show an hour of data. Each data 
+                point would represent 7.2 seconds or 7,200 milliseconds. 
+                Suppose we have intervals of 1,000 and 10,000. The sample 
+                size that we want is closer to 10,000, but it’s less. Can we 
+                live with the 10,000-millisecond data? Is it close enough? Or 
+                should the system give us 1,000-millisecond data?</p>
+            <p>Using the Query Split between Intervals field, we get to 
+                specify what “close enough” is. If we say 30%, then this 
+                means that if the interval we want is 30% or less than the 
+                difference between 10,000 and 1,000, then we will get 
+                1,000-millisecond data. Otherwise, we will get 
+                10,000-millisecond data. In this example, we would end up 
+                with 10,000-millisecond data.</p>
+            <h3>Maximum Number of Simultaneous Queries</h3>
+            <p>Typically, the data logging system will only service one query 
+                for logged data at a time. If we want it to service more 
+                simultaneous queries than that, we can specify that in this 
+                field. However, the ability to service more than one 
+                simultaneous query will come at a cost, in CPU load.</p>
+            <h3>Balance Workload and Maximum CPU percentage</h3>
+            <p>If we ask to balance the workload (by putting a check-mark in 
+                the “Balance Workload” check box), then the data logging system 
+                will monitor CPU usage. If the CPU usage gets over the 
+                percentage in the “Maximum CPU” field, then the data logging 
+                system will put itself to sleep for a while to reduce the 
+                workload. It will not log data while it is asleep. But it’s 
+                more important to keep the controller running.</p>
+            <h3>Time to Wait Before Cleaning</h3>
+            <p>“Cleaning” is the process of removing old data logging files 
+                when we are starting to run out of disk space on the compact 
+                flash card or NAS. The data logging system will wait for some 
+                number of minutes between one cleaning and another. We can 
+                specify that wait time with this field.</p>
+            <h3>Space to Leave Free on Local Drive</h3>
+            <p>This is the amount of space that the data logging system will 
+                keep open on the compact flash card that runs the controller.</p>
+            <h3>Space to Leave Free on NAS</h3>
+            <p>This is the amount of space that the data logging system will 
+                keep open on the NAS. If it needs to, the data logging system 
+                will delete older files to keep this amount of space open.</p>
+            <h3>Automatically Determine Log Priority</h3>
+            <p>The data logging system has a number of logging “priorities.” 
+                These are strategies for determining which WebObjects are 
+                logged and which aren’t. “Essential” logging means that we 
+                log I/O points and major values in motion-related objects 
+                like axis controllers and motion profilers. “Secondary” 
+                logging means that we log “at reasonable cost.” “Luxury” 
+                logging means that we log essentially everything. Put a 
+                check mark in this check box to let the data logging system 
+                determine for itself what is logged and what isn’t. The system 
+                will look at CPU usage and attempt to determine the maximum 
+                number of values that it can safely log.</p>
+            <h3>Maximum Delay to Set Up Collectors</h3>
+            <p>When the data logging system starts up, it needs to set up 
+                “collectors,” which are objects that collect data. There is 
+                one collector for each interval that the data logging system 
+                needs to work with. The system needs to wait when starting up 
+                until certain conditions are met. For example, it needs to make 
+                sure that the time stamps that it uses synchronize with other 
+                controllers on the network. This field gives us a chance to 
+                tell the data logging system when it should stop waiting for 
+                other controllers and get on with logging data.</p>
+            <h3>Check Integrity at Runtime</h3>
+            <p>If there is a check mark in this check box, then the data 
+                logging system will take the time and trouble verify that all 
+                of the data log files are correct by checking the start times 
+                and lengths of files. This will allow it to determine whether 
+                any of the files are out of order, or if there are gaps or 
+                overlaps in logged data. If a problem is found, then a message 
+                will appear in the datalog.log file in /varco/log.</p>
+            <h3>In Debug Mode</h3>
+            <p>If there is a check mark in this check box, then the data 
+                logging system will print out extensive debug messages to its 
+                log file at /varco/log/datalog.log.</p>
+            <h2>Channels</h2>
+            <p>In the controller, publicly accessible data fields are called 
+                “WebObjects.” WebObjects are always readable, sometimes writable, 
+                and sometimes have persistent values. WebObjects are available 
+                to the operator interface through various HTTP calls. However, 
+                a WebObject is nothing more than a name and a value.</p>
+            <p>A “Channel” is an expansion of the WebObject concept. In its 
+                most basic form, a channel can be nothing more than a name 
+                and a value. However, a channel can include a specified data 
+                type (such as integer, float, etc.), a unit assignment, a title, 
+                a description, an abbreviation, and minimum and maximum range 
+                values. A channel is designed to work within a graphing program 
+                to make logged data more accessible to humans.</p>
+            <p>The data logging system can be configured to get data from 
+                specific WebObjects on a controller by configuring a set of 
+                channels. The channel configuration is stored in a separate 
+                configuration file than the data logging configuration. The 
+                channel configuration file is at 
+                /varco/www/operator/channel_config.xml.</p>
+            <p>Channels can be configured in the channel configuration tab of 
+                the data logging configuration applet.</p>
+            <p><img src="./Data Logging Configuration_files/channel_config_01.png" width="900" height="600"></p>
+            <h3>Finding Channels</h3>
+            <p>Using the Find/Add button, we can select WebObjects on the 
+                controller to log data for. Pressing this button brings up the 
+                WebObject selector dialog.</p>
+            <p><img src="./Data Logging Configuration_files/web_object_selector_01.png" width="1038" height="702"></p>
+            <p>This dialog allows the operator to select WebObjects in several 
+                different ways. Names can be selected directly from the tree 
+                view on the left, by adding selection filters, or by applying 
+                a saved list of values.</p>
+            <p>Selecting a folder in the tree view selects everything inside 
+                that folder. Multiple items can be selected by shift-clicking 
+                or ctrl-clicking on the items.</p>
+            <p>Selection filters allow the operator to search for specific 
+                values, either by typing in a case-insensitive search string 
+                or by using codes from the common Regular Expressions system 
+                of pattern matching. Adding more than one filter will broaden 
+                the scope of the search, instead of narrowing it.</p>
+            <p>Lists of WebObjects that are selected can be saved to files so 
+                that they can be used in other places.</p>
+            <h3>Editing Channels</h3>
+            <p>A channel can be edited by selecting it in the list and clicking 
+                on the Edit button. This brings up the channel editor dialog.</p>
+            <p><img src="./Data Logging Configuration_files/channel_editor_01.png" width="807" height="459"></p>
+            <p>Using the channel editor, it is possible to change the title, 
+                unit, description, abbreviation, and range. It is also possible 
+                to change the WebObject.</p>
+            <p>The range is used inside the graphing application to scale the 
+                display so that it will fit into the available space in the 
+                window. The range can be numbers or it can be retrieved from 
+                the values of other WebObjects.</p>
+        </div>
+        <div id="blue_bar_bottom">
+            <span id="left_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+    
+
+</body></html>

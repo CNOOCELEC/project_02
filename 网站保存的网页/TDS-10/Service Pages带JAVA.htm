@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0021)http://192.168.31.25/ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" ""><HTML><HEAD><META 
+content="IE=5.0000" http-equiv="X-UA-Compatible">
+     <TITLE>Service Pages</TITLE>     
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">     
+<META http-equiv="Pragma" content="no-cache">     
+<META http-equiv="Cache-Control" content="no-cache">         
+<STYLE type="text/css">
+      #dhtmltooltip{
+        position: absolute;
+        width: 150px;
+        border: 1px solid black;
+        padding: 2px;
+        background-color: lightyellow;
+        visibility: hidden;
+        z-index: 100;
+      }
+      #page{
+          position: relative;
+      }
+      #index_header{
+          background-color: #0000ff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 95px;
+          width: 100%;
+      }
+      #index_body{
+          background-color: black;
+          background-image: url('/images/brooding_red_clouds.jpg');
+          background-repeat: repeat-x;
+          position: absolute;
+          top: 95px;
+          width: 100%;
+          height: 800px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          color: white;
+      }
+      #nov_logo{
+          position: absolute;
+          left: 5px;
+          bottom: 0px;
+      }
+      #customer_rig_tool{
+          position: absolute;
+          right: 10px;
+          bottom: 0px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          color: #ffffff;
+          font-weight: bold;
+          font-size: 18px;
+      }
+      .tool_text{
+          font-size: 30px;
+      }
+      .title_text{
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+      }
+      #column{
+          padding: 5px;
+          width: 19%;
+          float: left;
+      }
+    </STYLE>
+         
+<SCRIPT src="Service%20Pages&#24102;JAVA_files/jquery-1.7.2.js" type="text/javascript"></SCRIPT>
+         
+<SCRIPT type="text/javascript">
+//        var RE_MOBILE = /iphone|ipod|blackberry|android|palm/gi;
+//        var RE_DESKTOP = /windows|linux|os\s+[x9]|solaris|bsd/i;
+//        var RE_BOT = /spider|crawl|slurp|bot/i;
+
+        function redirectMobile() {
+            var RE_MOBILE = /iphone|ipod|blackberry|android|palm/gi;
+            var userAgent = navigator.userAgent.toLowerCase();
+//console.log("userAgent", userAgent);
+//console.log("mobile ", RE_MOBILE.test(userAgent));
+            if (RE_MOBILE.test(userAgent)) {
+                window.location.replace("/page/mobile/index.html");
+            }
+        }
+        
+        // jquery starts this up as soon as the 
+        // document is loaded.
+        $(document).ready(function() {
+            redirectMobile();
+        });
+    </SCRIPT>
+         
+<SCRIPT src="Service%20Pages&#24102;JAVA_files/ieupdate.js" type="text/javascript"></SCRIPT>
+       
+<META name="GENERATOR" content="MSHTML 11.00.10570.1001"></HEAD>   
+<BODY topmargin="0" leftmargin="0" bgcolor="#000000" link="#ffffff" alink="#ffffff" 
+vlink="#ffffff" marginwidth="0" marginheight="0">
+<DIV id="page">
+<DIV id="index_header">
+<DIV id="nov_logo"><IMG width="97" height="63" alt="National Oilwell Varco" src="Service%20Pages&#24102;JAVA_files/NOV-Logo-blue.jpg"> 
+              </DIV>
+<DIV id="customer_rig_tool">
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/AdminServlet.htm" type="text/javascript"></SCRIPT>
+<BR>
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/AdminServlet(1).htm" type="text/javascript"></SCRIPT>
+<BR><SPAN class="tool_text">
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/AdminServlet(2).htm" type="text/javascript"></SCRIPT>
+</SPAN>               </DIV></DIV>
+<DIV id="index_body">
+<DIV id="column">
+<SCRIPT type="text/javascript">startIeFix();</SCRIPT>
+                 <APPLET width="200" height="30" code="com.nov.amphion.diagnostic.network.NetworkMenu.class" 
+archive="/jar/net-diagnostic.jar,&#10;                        /resource/applet_communications.jar,&#10;                        /resource/EXML-PLUS.jar"></APPLET> 
+        <!-- -->
+<SCRIPT type="text/javascript">endIeFix();</SCRIPT>
+               </DIV>
+<DIV id="column">
+<P><SPAN class="title_text">Software Management</SPAN></P>
+<P><A onmouseover="ddrivetip('Unified version, backup, and software management.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AdminServlet?function=softwareManager"> 
+                   Software Manager</A></P>
+<P><A onmouseover="ddrivetip('See what versions of major software components are currently installed.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/version.html">      
+              Software Versions</A></P>
+<P><A onmouseover="ddrivetip('Manages tool personality archives for this controller.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/Varball">        
+            Backup and Restore</A></P>
+<P><A onmouseover="ddrivetip('Install software components on this and other controllers.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/Installer">      
+              Software Installer</A></P>
+<P><A onmouseover="ddrivetip('Transfer Files to and from the Controller.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AdminServlet?function=transferFiles"> 
+                   Transfer Files</A></P></DIV>
+<DIV id="column">
+<P><SPAN class="title_text">Diagnostics</SPAN></P>
+<P><A onmouseover="ddrivetip('Examine, edit, and record controller data fields.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/monitor.html">      
+              Debug Monitor</A></P>
+<P><A onmouseover="ddrivetip('Lists all inputs and outputs on the controller.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/io_list.html">      
+              I/O Diagnostics</A></P>
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager.txt" type="text/javascript"></SCRIPT>
+                   
+<P><A onmouseover="ddrivetip('Debugger for controller communications scheduling system.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/schedule-diagnostic.html"> 
+                   Scheduler Diagnostics</A></P>
+<P><A onmouseover="ddrivetip('Provides an in-depth look at the Profibus configuration and network.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/profibus.html">     
+               Profibus Diagnostic</A></P>
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(1).txt" type="text/javascript"></SCRIPT>
+                   
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(2).txt" type="text/javascript"></SCRIPT>
+                   
+<P><A onmouseover="ddrivetip('Downloads current alarm log in .csv format. You will need to give the file a name with a .csv extension.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AlarmEventServlet?download=alarms"> 
+                   Download Alarms</A></P>
+<P><A onmouseover="ddrivetip('Gathers debugging information into an archive file and downloads it to the local computer.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/debug_info.html">   
+                 Collect Debug Information</A></P></DIV>
+<DIV id="column">
+<P><SPAN class="title_text">Configuration</SPAN></P>
+<P><A onmouseover="ddrivetip('Edit ownership rules and navigation.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/ScreenManager?command=preference_configuration"> 
+                   Preferences</A></P>
+<P><A onmouseover="ddrivetip('Configure navigation menus for operator screens.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/ScreenManager?command=operator_navigation_configuration"><FONT 
+face="Arial,Helvetica,sans-serif">Operator 
+Screen<BR>Configuration</FONT></A></P>
+<P><A onmouseover="ddrivetip('Configuration options for service pages.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/ScreenManager?command=maintenance_config"> 
+                   Service Pages<BR>Configuration</A></P>
+<P><A onmouseover="ddrivetip('Edit ownership rules and navigation.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/ScreenManager?command=ownership_configuration"> 
+                   Ownership<BR>Configuration</A></P>
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(3).txt" type="text/javascript"></SCRIPT>
+                   
+<P><A onmouseover="ddrivetip('Get the controller into or out of simulation mode. Manage simulation data files.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/simulation.html">   
+                 Simulation Control</A></P>
+<P><A onmouseover="ddrivetip('Examine and edit controller arrays.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/arrayman.html">     
+               Array Manipulator</A></P>
+<P><A onmouseover="ddrivetip('Manipulate controller alarm and event triggers.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/trigger_editor.html"> 
+                   Trigger Editor</A></P>
+<P><A onmouseover="ddrivetip('Check the consistency of files that need to be the same on every controller.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/consistency.html">  
+                  Consistency Checker</A></P>
+<P><A onmouseover="ddrivetip('Set the date and time on the controller.', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/settime.html">      
+              Set Date and Time</A></P>
+<P><A onmouseover="ddrivetip('Set the IP address on an auxiliary network device (e.g., a Wago).', 'yellow', '120')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AutoSetIpServlet"> 
+                   Set IP Address on Network Device</A></P>
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(4).txt" type="text/javascript"></SCRIPT>
+                   
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(5).txt" type="text/javascript"></SCRIPT>
+                   
+<SCRIPT language="JavaScript" src="Service%20Pages&#24102;JAVA_files/ScreenManager(6).txt" type="text/javascript"></SCRIPT>
+               </DIV>
+<DIV id="column">
+<P><SPAN class="title_text">Controller</SPAN></P>
+<P>
+<SCRIPT type="text/javascript">startIeFix();</SCRIPT>
+                   <APPLET width="200" height="104" code="com.nov.amphion.diagnostic.dashboard.Dashboard.class" 
+archive="/jar/dashboard.jar"></APPLET>             <!-- -->
+<SCRIPT type="text/javascript">endIeFix();</SCRIPT>
+</P>
+<P><A onmouseover="ddrivetip('View or reset the controller\'s log files.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/LogManagerServlet"> 
+                   Log Manager/Viewer</A></P>
+<P><A onmouseover="ddrivetip('This will stop the Java Virtual Machine and HTTP listener, pause long enough for them to shut down gracefully, and then restart them. During this time you will not be able to access this controller with your browser. <strong>If you update the tool jar file, then you must restart the JVM in order for the changes to take effect.</strong>', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AdminServlet?function=restartKernel"> 
+                   Restart JVM</A></P><!--
+                  <p><a href="/servlet/AdminServlet?function=stopController" 
+                    onMouseover="ddrivetip('Stops the controller program but leaves the Java Virtual Machine and HTTP listener running. <strong>The controller must be stopped and restarted for a change to an I/O assignment to take effect.</strong>', 'yellow', '300')" onMouseout="hideddrivetip()">
+                    Stop Controller Program</a></p>
+                  <p><a href="/servlet/AdminServlet?function=startController" 
+                    onMouseover="ddrivetip('Starts the controller program (rather than the whole controller computer).', 'yellow', '300')" onMouseout="hideddrivetip()">
+                    Start Controller Program</a></p>
+            --> 
+                  
+<P><A onmouseover="ddrivetip('Flashing the Applicom Card updates the Applicom board\'s flash memory. If it runs successfully, the green lights on all installed Applicom boards will be blinking once the process completes. <strong>If you update an Applicom file, then you must flash the Applicom Card in order for the changes to take effect.</strong>', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/flash_delay.html">  
+                  Flash Applicom Card</A></P>
+<P><A onmouseover="ddrivetip('Do a soft reboot of the controller computer.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AdminServlet?function=shutdownRestart"> 
+                   Restart Controller Computer</A></P>
+<P><A onmouseover="ddrivetip('Do a soft halt of the controller computer.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/servlet/AdminServlet?function=shutdownHalt"> 
+                   Halt Controller Computer</A></P><!--
+                  <p><a href="/maintenance/general/halt.html" 
+                    onMouseover="ddrivetip('Restart or halt all controller computers.', 'yellow', '300')" onMouseout="hideddrivetip()">
+                    Halt/Restart All Controllers</a></p>
+            --> 
+                  
+<P><A onmouseover="ddrivetip('Go to the operator screens.', 'yellow', '300')" 
+onmouseout="hideddrivetip()" href="http://192.168.31.25/page/pilot.html">        
+            Operator Screens</A></P>
+<P><A onmouseover="ddrivetip('Documentation.', 'yellow', '300')" onmouseout="hideddrivetip()" 
+href="http://192.168.31.25/page/help/index.html">                    
+Documentation</A></P></DIV></DIV></DIV>
+<DIV id="dhtmltooltip"></DIV>
+<SCRIPT type="text/javascript">
+    <!--
+
+/***********************************************
+* Cool DHTML tooltip script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var offsetxpoint=-60 //Customize x offset of tooltip
+var offsetypoint=20 //Customize y offset of tooltip
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["dhtmltooltip"] : document.getElementById? document.getElementById("dhtmltooltip") : ""
+
+function ietruebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function ddrivetip(thetext, thecolor, thewidth){
+if (ns6||ie){
+if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px"
+if (typeof thecolor!="undefined" && thecolor!="") tipobj.style.backgroundColor=thecolor
+tipobj.innerHTML=thetext
+enabletip=true
+return false
+}
+}
+
+function positiontip(e){
+if (enabletip){
+var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+
+var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<tipobj.offsetWidth)
+//move the horizontal position of the menu to the left by it's width
+tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px"
+else if (curX<leftedge)
+tipobj.style.left="5px"
+else
+//position the horizontal position of the menu where the mouse is positioned
+tipobj.style.left=curX+offsetxpoint+"px"
+
+//same concept with the vertical position
+if (bottomedge<tipobj.offsetHeight)
+tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+else
+tipobj.style.top=curY+offsetypoint+"px"
+tipobj.style.visibility="visible"
+}
+}
+
+function hideddrivetip(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.style.backgroundColor=''
+tipobj.style.width=''
+}
+}
+
+document.onmousemove=positiontip
+
+    function jumptolink(aSelector) {
+        var selectedItem = aSelector.options[aSelector.selectedIndex]
+        if (document.getElementById && selectedItem.getAttribute("target") == "newWin")
+            window.open(selectedItem.value)
+        else
+            window.location = selectedItem.value
+    }
+    //-->
+    </SCRIPT>
+             </BODY></HTML>

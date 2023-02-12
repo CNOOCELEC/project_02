@@ -1,0 +1,138 @@
+
+<!-- saved from url=(0037)http://10.18.198.240:8080/lefttop.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><title>Deeptree Controlbar</title>
+
+<script language="javascript"> 
+
+var strColumns_Current = "158,*";
+
+function movenext()
+  {
+  top.deeptree.movenext();
+  }
+
+function moveprevious()
+  {
+  top.deeptree.moveprevious();
+  }
+
+function hidetoc()
+  {
+  strColumns_Current = top.mainFrameset.cols
+  
+  top.mainFrameset.cols = "1,*";
+  top.workareaFrame.main_toolbar.document.all("showtoc").style.display = "block";
+  }
+
+function showtoc(parColumns_Current)
+  {
+  if(parColumns_Current!=null){
+    strColumns_Current = parColumns_Current;
+  }
+  top.mainFrameset.cols = strColumns_Current;
+  top.workareaFrame.main_toolbar.document.all("showtoc").style.display = "none";
+  }
+  
+function synctoc()
+{
+    //top.location = top.location.pathname + "?url=" + top.content.location.pathname + top.content.location.search + top.content.location.hash;
+	top.leftFrame.location = top.leftFrame.location;
+}
+
+function displaybutton()
+  {
+  document.all.showtoc.style.display = "block";
+  }
+
+function mouseover(item)
+  {
+  switch (item)
+    {
+    case "moveprevious" :
+      window.status = "Move up to the previous node in the tree [SHIFT + TAB]";
+      document.all.imgMovePrevious.src = "images/moveprevious2.gif";
+      break;
+
+    case "movenext" :
+      window.status = "Move down to the next node in the tree [TAB]";
+      document.all.imgMoveNext.src = "images/movenext2.gif";
+      break;
+
+    case "synctoc" :
+      window.status = "Synchronize the tree with the current page";
+      document.all.imgSyncToc.src = "images/synctoc2.gif"
+      break;
+
+    case "hidetoc" :
+      window.status = "Hide TOC";
+      document.all.imgHideToc.src = "images/hidetoc2.gif"
+      break;
+    }
+
+  }
+
+function mouseout(item)
+  {
+  switch (item)
+    {
+    case "moveprevious" :
+      window.status = "";
+      document.all.imgMovePrevious.src = "images/moveprevious1.gif";
+      break;
+
+    case "movenext" :
+      window.status = "";
+      document.all.imgMoveNext.src = "images/movenext1.gif";
+      break;
+
+    case "synctoc" :
+      window.status = "";
+      document.all.imgSyncToc.src = "images/synctoc1.gif"
+      break;
+
+    case "hidetoc" :
+      window.status = "";
+      document.all.imgHideToc.src = "images/hidetoc1.gif"
+      break;
+    }
+  }
+
+function selectstart()
+  {
+  window.event.cancelBubble = true;
+  window.event.returnValue = false;
+  return false;
+  }
+
+</script>
+
+<meta content="noindex" name="Robots"><!--TOOLBAR_START--><!--TOOLBAR_EXEMPT--><!--TOOLBAR_END-->
+<meta content="MSHTML 6.00.2900.2668" name="GENERATOR">
+
+<link rel="stylesheet" href="./custom.css" type="text/css">
+
+</head>
+
+<body onselectstart="selectstart();" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tbody>
+  <tr class="notice-title">
+    <td align="left">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td width="4" height="20"><img src="./1pix.gif" width="4"></td>
+          <td height="20"><img id="imgMoveNext" onmouseover="mouseover(&#39;movenext&#39;);" title="Move down to the next node in the tree [TAB]" style="CURSOR: hand" onmouseout="mouseout(&#39;movenext&#39;)" src="./movenext1.gif" border="0"></td>
+          <td width="2" height="20"><img src="./1pix(1).gif" width="2"></td>
+          <td height="20"><img id="imgMovePrevious" onmouseover="mouseover(&#39;moveprevious&#39;);" title="Move up to the previous node in the tree [SHIFT + TAB]" style="CURSOR: hand" onmouseout="mouseout(&#39;moveprevious&#39;)" src="./moveprevious1.gif" border="0"></td>
+          <td width="8" height="20"><img src="./1pix(1).gif" width="8"></td></tr></tbody></table></td>
+    <td align="right">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+        <tr>
+          <td height="20">
+		    <img id="imgSyncToc" onmouseover="mouseover(&#39;synctoc&#39;);" title="Synchronize the Tree with the current page" style="CURSOR: hand" onclick="synctoc();" onmouseout="mouseout(&#39;synctoc&#39;);" src="./synctoc1.gif"></td>
+          <td width="10" height="20"><img height="20" src="./1pix(1).gif" width="10"></td>
+          <td height="20"><img id="imgHideToc" onmouseover="mouseover(&#39;hidetoc&#39;);" title="Hide TOC" style="CURSOR: hand" onclick="hidetoc();" onmouseout="mouseout(&#39;hidetoc&#39;);" src="./hidetoc1.gif"></td>
+          <td width="4" height="20"><img height="20" src="./1pix(1).gif" width="4"></td></tr></tbody></table></td></tr></tbody></table>
+</body></html>

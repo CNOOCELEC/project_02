@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://192.168.31.25/page/help/ownership/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>The Ownerhsip.xml Configuration File</title>
+        
+        <script type="text/javascript" src="./The Ownerhsip.xml Configuration File_files/ieupdate.js"></script>
+        <link rel="stylesheet" type="text/css" href="./The Ownerhsip.xml Configuration File_files/blue_bar.css">
+        <style type="text/css">
+            pre {
+                background-color: #eeeeee;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="blue_bar">
+            <span id="blue_bar_title">Documentation: The ownership.xml Configuration File - <script language="JavaScript" type="text/javascript" src="./The Ownerhsip.xml Configuration File_files/AdminServlet"></script>Top Drive</span>
+            <span id="right_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+        <div>
+            <h2>The ownership.xml Configuration File</h2>
+            <div>
+                <h3>Purpose</h3>
+                <p>Although it does many different things, the primary purpose 
+                    of the ownership.xml is to define ownership rules. The 
+                    ownership lock-out system operates in the operator tool 
+                    screens, rather than on the controller. That is, the 
+                    controller doesn’t care who writes to it. The operator 
+                    screens determine whether it’s possible to write values to 
+                    one controller or another. The ownership.xml configures the 
+                    ownership rules.</p>
+                <p>The ownership.xml file should be the same on every 
+                    controller on a rig. It should be placed in the /varco/www/
+                    directory.</p>
+                <p>The root of the ownership.xml file can have two attributes 
+                    that define the customer and rig names. These are used by 
+                    the servlets to show the customer and rig names on the 
+                    service index page.</p>
+                <pre><code>
+  &lt;config customer='...' rig='...'&gt;
+
+  ...
+
+  &lt;/config&gt; 
+                </code></pre>
+                <h3>SBCs</h3>
+                <p>One thing that the ownership.xml defines is the tool 
+                    controller machines that the operator screens can talk to. 
+                    The first section in the ownership.xml defines the SBCs 
+                    (tool controllers):</p>
+                <pre><code>
+  &lt;config customer='...' rig='...'&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+
+    ...
+                </code></pre>
+                <p>Each SBC on the network must have an entry in the 
+                    ownership.xml file. In the past, this information was used 
+                    only by the operator screens. However, now this information 
+                    is read by the j9.sh script on the Linux tool controller 
+                    machines when the machine is starting up. The j9.sh 
+                    script actually sets the IP address of the tool controller 
+                    machine using the information in the ownership.xml file. 
+                    The script reads the screen tool name from the 
+                    admin_config.xml file and compares it with 
+                    the list of SBCs in the ownership.xml file. When it 
+                    finds an id that matches the screen tool name, the 
+                    corresponding IP address is read from the ownership.xml 
+                    file and assigned to that machine.</p>
+                <p>The id attribute is a human-readable name. This name will 
+                    not appear in the operator screens, but it must match the 
+                    screen tool name (which will appear as the tool name on 
+                    all of the service screens). Therefore, the id must be 
+                    legible. By convention, we do not use abbreviations like 
+                    “PRS1.” Instead, we want names like “Fore Racker.” Spaces 
+                    are allowed.</p>
+                <p>The ip attribute is the IP address of that machine, e.g., 
+                    “192.168.31.20.” </p>
+                <h3>Network Mask and Gateway</h3>
+                <p>The next section in the ownership.xml defines the network 
+                    net mask and gateway:</p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network netmask='...' gateway='...'/&gt;
+
+    ...
+                </code></pre>
+                <p>Because the j9.sh script defines the IP address of the 
+                    machine that it runs on, it also needs to know the net 
+                    mask and gateway. This information used to be in the 
+                    /etc/network/interfaces file.</p>
+                <p>The netmask attribute is typically “255.255.255.0.”</p>
+                <p>The gateway attribute is typically “192.168.31.1” (for 
+                    IP addresses in the 192.168.31.... range).</p>
+                <h3>HMIs</h3>
+                <p>The next section in the ownership.xml defines HMI ownership 
+                    groups:</p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network.../&gt;
+
+    &lt;hmi ip='...' group='...'/&gt;
+
+    ...
+                </code></pre>
+                <p>This change applies to www 1.6.0 to 1.7.0 only. The “hmi” 
+                    tag was introduced as a way to assign ownership groups to 
+                    devices with specific IP addresses instead of having to 
+                    put an id.txt file on that device. If an HMI runs a web 
+                    browser that runs the operator screens, for example, that 
+                    HMI would be identified as one of the driller’s HMIs by 
+                    an id.txt file in the /varco directory on the hard drive 
+                    of that device that contained the word “Driller.” As of 
+                    www 1.6.0, the id.txt file does not need to be on the 
+                    driller’s HMI as long as there is an entry in the 
+                    ownership.xml file that specifies that the HMI 
+                    (identified by its IP address) has the group “Driller.”</p>
+                <p>In practice, however, even in www 1.6.x, the “hmi” tags 
+                    were never used. The id.txt file was never removed from 
+                    HMIs. The “hmi” tag can usually be safely removed from 
+                    the ownership.xml file.</p>
+                <h3>Tools</h3>
+                <p>The next section in the ownership.xml defines the tools: </p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network.../&gt;
+
+    &lt;hmi.../&gt;
+    ...
+    &lt;hmi.../&gt;
+
+    &lt;tool name='...' host='...' url='...' ownership='...'/&gt;
+
+    ...
+                </code></pre>
+                <p>Each SBC can host more than one tool. For example, the 
+                    auxiliary SBC might have a cathead, a power slips, and a 
+                    rotary table. The operator screens are organized around 
+                    tools only and essentially ignore SBCs.</p>
+                <p>The name attribute is the name of the tool. Again, by 
+                    convention, we prefer to spell these out (e.g, “Rotary 
+                    Table” instead of “RST”). The names have to be readable 
+                    by humans. Spaces are allowed, but the names have to be 
+                    short so that they can fit on buttons in the operator 
+                    screens.</p>
+                <p>The host name in the tool element must correspond to the 
+                    name of an SBC. That is, it must match the “id” attribute 
+                    of one of the sbc elements above. This indicates which 
+                    SBC hosts the tool. This information will be used to look 
+                    up the IP address of the machine that is responsible for 
+                    the tool.</p>
+                <p>The url attribute is a little confusing. Most often, its 
+                    value is “/operator/,” but on SBCs that host multiple 
+                    tools, it is quite often something like “/operator/RotaryTable/.”
+                    The original idea was that when one visited a screen for 
+                    a tool, that one would know the name of the tool by 
+                    looking at the directory inside of /varco/www/operator 
+                    that the screen appeared in. Screens for the rotary table 
+                    would be in /varco/www/operator/RotaryTable, for example. 
+                    However, the operator screens don’t need to detect the 
+                    tool in that way. The operator screens detect the tool 
+                    when the operator selects it. But this attribute is still 
+                    important. It is used by the OwnershipManager, an ownership 
+                    class that is part of the controller code, but which is 
+                    actually used by the operator screen applet. The 
+                    OwnershipManager uses this information to work with the 
+                    controller’s ControlStationMediator to figure out the names 
+                    of the ownership web objects. For example, on most tools, 
+                    there will be a web object named OpenStation.owner, where 
+                    the name of the current tool owner can be found; in the 
+                    ownership.xml, one would indicate that fact by setting the 
+                    url to “/operator/.” However, on the auxiliary, the name 
+                    of the current tool owner for the rotary table tool would 
+                    be contained by the web object named 
+                    “OpenStation.RotaryTable.owner,” so the url for the rotary 
+                    table tool in the ownership.xml would have to be 
+                    “/operator/RotaryTable.”</p>
+                <p>The ownership attribute actually specifies the level of 
+                    ownership that applies to that tool. The two most common 
+                    values for this attribute are “exclusive” (meaning that 
+                    only specific, named operators can control the tool at 
+                    one time—see the “groups” below) and “none” 
+                    (meaning that everyone has simultaneous access to the 
+                    tool at any time). A control station without ownership 
+                    of an “exclusive” tool cannot write to the tool. There 
+                    is a third possibility, “any,” that would allow any 
+                    control station to own a tool, but only one can own 
+                    the tool at any one time.</p>
+                <h3>Ownership Groups</h3>
+                <p>The next section of the ownership.xml file lists the 
+                    ownership groups:</p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network.../&gt;
+
+    &lt;hmi.../&gt;
+    ...
+    &lt;hmi.../&gt;
+
+    &lt;tool.../&gt;
+    ...
+    &lt;tool.../&gt;
+
+    &lt;group name='...' service_screens_visible='...'&gt;
+      &lt;allowed tool='...' enablerInput='...' disabledMessage='...'/&gt;
+      ...
+      &lt;allowed tool='...'/&gt;
+    &lt;/group&gt;
+
+    ...
+                </code></pre>
+                <p>The group specifies an ownership group and the list of 
+                    exclusive tools that the group is allowed to own.</p>
+                <p>The group name attribute is the name of the group. This is 
+                    typically something like “Driller” or “Remote.” The concept 
+                    is that usually an operator will have more than one HMI. 
+                    All of the driller’s HMIs will be in the “Driller” group, 
+                    so they will all function the same way with regards to 
+                    ownership. This group name is the name that gets written 
+                    to the controller’s OpenStation.request web object, and 
+                    appears back in the OpenStation.owner web object and will 
+                    appear as the name of the owner in the ownership button on 
+                    the screen. It is also the name of the local group 
+                    identifier in the operator screen communication logs. Also, 
+                    the HMI identifies itself as this group by a file called 
+                    /varco/id.txt which must be written to the HMI itself.</p>
+                <p>The service_screens_visible attribute is optional. If it 
+                    appears, it is most likely going to say 
+                    “service_screens_visible='T'” because the default is false. 
+                    If this is set to “T,” then there will be an extra button 
+                    on the operator screen’s tool utilities menu for that 
+                    station that will allow the operator to navigate to the 
+                    service index page. Usually, we want one station to be 
+                    able to do this, but not the driller or assistant driller.</p>
+                <p>The allowed tool attribute specifies one tool that this 
+                    ownership group is allowed to own. These would typically 
+                    be the tools specified above with ownership='exclusive.' 
+                    These have to be names that appear in the tool elements 
+                    above.</p>
+                <p>The enablerInput is optional. It specifies the name of a 
+                    WebObject whose value would have to be true in order for 
+                    ownership to be enabled for that tool for that group. This 
+                    allows hard-wired lockout switches or E-stop switches 
+                    (like on multi-chair drawworks stations) to interlock the 
+                    ability to take ownership, and to cause ownership to be 
+                    lost if the switch position changes.</p>
+                <p>The disabledMessage is another optional field associated 
+                    with the enablerInput. If ownership is lost or disabled 
+                    because of the enablerInput, this message will show up on 
+                    the screen to explain what happened. This should be a very 
+                    short message (one word or two).</p>
+                <h3>Ownership Exclusions</h3>
+                <p>The next section in the ownership.xml is the exclusions:</p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network.../&gt;
+
+    &lt;hmi.../&gt;
+    ...
+    &lt;hmi.../&gt;
+
+    &lt;tool.../&gt;
+    ...
+    &lt;tool.../&gt;
+
+    &lt;group/&gt;
+    ...
+    &lt;/group&gt;
+
+    &lt;exclude&gt;
+      &lt;excluded tool='...'/&gt;
+      &lt;excluded tool='...'/&gt;
+    &lt;/exclude&gt;
+
+    ...
+                </code></pre>
+                <p>There are some tools that cannot be operated by an operator 
+                    at the same time. For example, a control station typically 
+                    will have only one joystick. The drawworks requires a 
+                    joystick and so does the racker. We do not want the 
+                    operator to own the drawworks (and send joystick commands 
+                    to it) at the same time that the operator owns the racker 
+                    (and send joystick command to it at the same time). So, 
+                    we exclude the possibility that the operator can own both 
+                    at once. There can be any number of exclusions and any 
+                    number of tools in a single exclusion group.</p>
+                <p>The tool attribute has to be a name that matches the one of 
+                    the names in the tool elements above.</p>
+                <h3>Navigation</h3>
+                <p>The next section in the ownership.xml file is the 
+                    navigation section. This is a single element by itself that 
+                    is distinct from the other elements at the root level of 
+                    the ownership.xml file.</p>
+                <pre><code>
+  &lt;config&gt;
+    &lt;sbc id='...' ip='...'/&gt;
+    ...
+    &lt;sbc id='...' ip='...'/&gt;
+
+    &lt;network.../&gt;
+
+    &lt;hmi.../&gt;
+    ...
+    &lt;hmi.../&gt;
+
+    &lt;tool.../&gt;
+    ...
+    &lt;tool.../&gt;
+
+    &lt;group/&gt;
+    ...
+    &lt;/group&gt;
+
+    &lt;exclude&gt;
+    ...
+    &lt;/exclude&gt;
+
+    &lt;navigation&gt;
+    ....
+    &lt;/navigation&gt;
+
+  &lt;/config&gt;
+                </code></pre>
+                <h3>Navigation: Pre-configured Tool Buttons</h3>
+                <p>The navigation section is used exclusively by the operator 
+                    screens applet to configure navigation buttons on the 
+                    operator screens menu. It has several subsections of its 
+                    own. The first of these is the list of pre-configured 
+                    tool buttons:</p>
+                <pre><code>
+  &lt;config&gt;
+    ...
+    &lt;navigation&gt;
+      &lt;pre_configured_tool_buttons&gt;
+        &lt;button name='...'&gt;
+          &lt;tool name='...'/&gt;
+          ...
+          &lt;tool name='...'/&gt;
+        &lt;/button&gt;
+      &lt;/pre-configured_tool_buttons&gt;
+    &lt;/navigation&gt;
+  &lt;/config&gt;
+                </code></pre>
+                <p>The pre-configured tool buttons section is optional. If you 
+                    don’t include it, then the operator screen system will have 
+                    two buttons to the left of the “Alarms” button: “My Tools” 
+                    and “Other Tools” The menu for the “My Tools” button 
+                    includes the tools that the operator station is allowed 
+                    to own. The menu for the “Other Tools” button includes 
+                    the tools that the operator station can see but cannot 
+                    own. These are determined by the list of allowed tools 
+                    in the ownership groups above.</p>
+                <p>If the pre-configured tool buttons section is included, 
+                    then the “My Tools” and “Other Tools” buttons do not 
+                    appear. In their place are whatever buttons are specified 
+                    in the pre-configured tools.</p>
+                <p>The button name attribute will determine the main of the 
+                    button on the main tool bar in the operator screens. You 
+                    should try to limit the number of button elements to one 
+                    or two. You might be able to crowd three in there, if you 
+                    need to.</p>
+                <p>The tool name attribute will determine the name of a tool 
+                    button in the menu of the main button. The names of the 
+                    tools in the tool elements all have to match names of 
+                    tools defined in the ownership.xml file. There is a 
+                    limit to how many tools you can have. The limit has 
+                    to do with how much screen real estate each tool button 
+                    takes up. The operator screen menu bar will break up a 
+                    list of tools into two columns of buttons, so you might 
+                    be able to fit about twenty tools.</p>
+                <p>If you have a tool that you don’t have screens for, you can 
+                    just leave it off of the lists of pre-configured tool 
+                    buttons and a button for it will not appear.</p>
+                <p>By convention, we would like these tools to be be in 
+                    alphabetical order.</p>
+                <h3>Navigation: Process Screens</h3>
+                <p>The next section in the navigation element is the list of 
+                    process screens:</p>
+                <pre><code>
+  &lt;config&gt;
+    ...
+    &lt;navigation&gt;
+      &lt;pre_configured_tool_buttons&gt;
+      ...
+      &lt;/pre-configured_tool_buttons&gt;
+
+      &lt;process_screens&gt;
+        &lt;screen name='...' url='...' isDefaultHomeScreen='...'/&gt;
+          &lt;involved_tools&gt;&gt;
+            &lt;tool name='...'/&gt;
+            ...
+            &lt;tool name='...'/&gt;
+          &lt;/involved_tools&gt;
+        &lt;/screen&gt;
+      &lt;/process_screens&gt;
+    &lt;/navigation&gt;
+  &lt;/config&gt;
+                </code></pre>
+                <p>The process_screens sections is optional. You should include 
+                    it if you have process screens. A process screen is most 
+                    strictly defined as a screen that has to talk with more 
+                    than one tool. However, any screen associated with any 
+                    tool can talk with more than one tool. For example, the 
+                    racker operator screen talks with both the racker and the 
+                    fingerboard tools.</p>
+                <p>Usually, in a process screen, each data field includes the 
+                    name of the tool that it needs to get data from or write to, 
+                    as opposed to a screen that is tool-specific, where it will 
+                    just write to the tool that it came from.</p>
+                <p>For our purposes, a process screen is essentially a single 
+                    screen that acts like a tool. A button for a screen listed 
+                    in the process_screens section will appear alongside the 
+                    other tools in the tool menu.</p>
+                <p>The url should list the full path name of the screen 
+                    document, like in “/varco/www/operator/drilling_overview.xml.” 
+                    This should be the same on every SBC. The same document 
+                    should appear in the same place on every SBC.</p>
+                <p>The isDefaultHomeScreen attribute is optional. Typically, 
+                    it’s only there if the value is “T,” since there isn’t any 
+                    other reason to have it in there. A process screen that 
+                    is marked with this attribute will have its own button 
+                    appear on the main tool bar and will not appear in the tool 
+                    menu. In www versions before www 1.7.4, only one of the 
+                    process screens could be the default home screen. In www 
+                    1.7.4, any number of process screens can be marked as 
+                    “default home screens” and they will appear in the main 
+                    navigation tool bar in the operator screens.</p>
+                <p>The involved_tools section is not optional. Each tool 
+                    element in the involved_tools must list one of the tools 
+                    that the process screen talks to. If all of the tools that 
+                    the process screen talks to are offline, then the button 
+                    for that process screen will be disabled. If any one of the 
+                    tools is online and available, then the button for the 
+                    process screen will be enabled.</p>
+                <p>The names of the tools in the involved_tools section need 
+                    to all be defined in the tools section of the ownership.xml.</p>
+                <h3>Navigation: System</h3>
+                <p>The next section of the navigation element is the system 
+                    element:</p>
+                <pre><code>
+  &lt;config&gt;
+    ...
+    &lt;navigation&gt;
+      &lt;pre_configured_tool_buttons&gt;
+      ...
+      &lt;/pre-configured_tool_buttons&gt;
+
+      &lt;process_screens&gt;
+      ...
+      &lt;/process_screens&gt;
+
+      &lt;system button_name='...'&gt;
+        &lt;tool name='...' color='...' default='...'&gt;
+          &lt;link name='...'&gt;
+            &lt;link name='...' url='...'/&gt;
+            ...
+            &lt;link name='...' url='...'/&gt;
+          &lt;/link&gt;
+          &lt;link name='...' url='...'/&gt;
+        &lt;/tool&gt;
+        ...
+      &lt;/system&gt;
+    &lt;/navigation&gt;
+  &lt;/config&gt;
+                </code></pre>
+                <p>The system element is required. It lists the navigation 
+                    menu buttons for each tool screen for each tool.</p>
+                <p>The system button_name attribute is optional and probably 
+                    unnecessary. It lets you name the tool button. On the 
+                    main menu bar, there will be one button that is 
+                    dedicated to the tool whose screen is currently showing. 
+                    The name of that button is the name of the tool that is 
+                    currently selected. Before the operator selects a tool, 
+                    the name of this button is “This Tool” by default.</p>
+                <p>Inside the system element, there will be one tool element 
+                    for each tool on the rig that has screens. It’s possible 
+                    to leave a tool out of this section and its button will 
+                    not appear.</p>
+                <p>If you do not have a list of pre-configured tool buttons 
+                    (see above), then the menu of tool buttons will be in the 
+                    order in which they appear in the “system” section here.</p>
+                <p>By convention, we would like these tools to be be in 
+                    alphabetical order.</p>
+                <p>The color attribute is unnecessary. You can leave it out. 
+                    At one time, we thought we wanted to distinguish between 
+                    tools by giving each tool a different color in 
+                    its navigation buttons. We don’t do that anymore. All of 
+                    the navigation buttons are dark blue.</p>
+                <p>The default attribute is the full path name of the default 
+                    screen for that tool. That is, when the operator first 
+                    navigates to a tool, we want some screen for that tool 
+                    to show up right away on the screen. This is how we 
+                    specify what that screen will be. Typically, it’s the 
+                    main operator screen for the tool. Also, we usually want 
+                    a link to that tool in the list of links below it.</p>
+                <p>The links elements, in www 1.7.4, are sort of optional. 
+                    It is standard practice to build a separate configuration 
+                    file, /varco/www/operator/nav_config.xml file, to configure 
+                    the navigation links on the operator screens for each tool. 
+                    The syntax of that file is the same as it is in the system 
+                    element in the ownership.xml. It is easier to configure 
+                    the nav_config.xml file for each tool instead of trying 
+                    to coordinate among several tool designers to put that 
+                    information in a single ownerhsip.xml file that needs to 
+                    be the same on every controller.</p>
+                <p>The link elements can be used in two ways. The name 
+                    attribute becomes the name of a navigation button. A 
+                    link that contains just a name and includes a list of 
+                    other links will produce a sub-menu for that tool button. 
+                    A link that contains a name and a url attribute is a button 
+                    that will allow the operator to navigate to a screen.</p>
+                <p>The url attribute is the full path name of the screen file 
+                    on the SBC.</p>
+                <h3>Navigation: System: MSI or V-DAQ</h3>
+                <p>The MSI or V-DAQ requires special handling. 
+                    Because these tools do not have operator screens as we know 
+                    them, they can’t be treated as one of our tools in the system 
+                    element of the ownership.xml file. The MSI or V-DAQ entry 
+                    has to look like this:</p>
+                <pre><code>
+  &lt;tool name='MSI' varco_tool='F' vdaq='T' url='/servlet/com.varco.cp.Servlet.OperatorScreensServlet'/&gt;
+                </code></pre>
+            </div>
+        </div>
+    
+
+
+</body></html>

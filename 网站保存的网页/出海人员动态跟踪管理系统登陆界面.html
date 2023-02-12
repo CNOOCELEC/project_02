@@ -1,0 +1,394 @@
+
+<!-- saved from url=(0026)http://10.18.198.240:8080/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+<title>出海人员动态跟踪管理系统</title>
+<link rel="stylesheet" href="./出海人员动态跟踪管理系统登陆界面_files/custom.css" type="text/css">
+<script type="text/javascript" src="./出海人员动态跟踪管理系统登陆界面_files/md5.js"></script>
+  <script type="text/javascript" src="./出海人员动态跟踪管理系统登陆界面_files/jsencrypt.js"></script>
+<style type="text/css">
+<!--
+STYLE23 {
+	font-family: "黑体";
+	font-size: 16px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	color: #CF4A20;
+	text-decoration: underline;
+}
+.STYLE25 {font-size: 12px;color: #333333;}
+.STYLE26 {
+	color: #666666;
+	font-weight: bold;
+}
+.STYLE27 {font-size: 12px}
+-->
+</style>
+
+<script language="javascript">
+  //if (self != top) { top.location = self.location; }
+</script>
+<script>
+  function myBrowser() {
+    var userAgent = navigator.userAgent;
+    var isOpera = userAgent.indexOf("Opera") > -1;
+    var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera;
+    var isFF = userAgent.indexOf("Firefox") > -1;
+    var isSafari = userAgent.indexOf("Safari") > -1;
+    if (isIE) {
+      var IE5 = IE55 = IE6 = IE7 = IE8 = IE9 = IE10 = false;
+      var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+      reIE.test(userAgent);
+      var fIEVersion = parseFloat(RegExp["$1"]);
+      IE55 = fIEVersion == 5.5;
+      IE6 = fIEVersion == 6.0;
+      IE7 = fIEVersion == 7.0;
+      IE8 = fIEVersion == 8.0;
+      IE9 = fIEVersion == 9;
+      IE10 = fIEVersion == 10;
+      if (IE55 || IE6 || IE7 || IE8 || IE9 || IE10) {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }
+function fnCheck(){
+    
+      alert("您已经登陆系统了，请注销之后再进行登陆。");
+    
+	if(document.form1.userid.value=='') {
+		alert('请填写您的用户名！');
+		document.form1.userid.focus();
+		return false;
+	}
+	if(document.form1.password.value=='') {
+		alert('请填写您的密码！');
+		document.form1.password.focus();
+		return false;
+	}
+	
+	var regu =/[^A-Za-z0-9_]/;
+	var reg=new RegExp(" ","g");
+	var re = new RegExp(regu);
+	document.form1.userid.value=document.form1.userid.value.replace(reg,"");
+	document.form1.password.value=document.form1.password.value.replace(reg,"");
+
+  var actionType = document.getElementById('fid');
+    if(myBrowser()){
+      actionType.value = "F00.10.00.00.00"
+    }else{
+      actionType.value = "F00.10.00.00.02"
+    }
+  var password = document.form1.password.value;
+  var encrypt = new JSEncrypt();
+  //公钥和私钥通过java后端工具类RSAUtils进行生成
+  encrypt.setPublicKey("-----BEGIN PUBLIC KEY-----MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1e/P+KW2G5hZdNWI9ibM7pp7hWh9HEZV9nZ4bynyRdfllOHv7LYWCj1pZ9mFWRzLFwhQYKEw69o8zEfEuSw4HCfaCK0FAZ/q7iuVLhvU3ugNIKHsRXX2JWXvYREEAHTmY3ZWhSkar8wyMAlYdW3OLW2RO12fIV82y2kWDhipyV2plo4lJiFm4a6hIApy2E6gjc+hsvo9IashRjsLD2sHxLqQVk1EhoLyEFfvXY9MV9AcxJ50WxfD4LVOOZQxB+kdSUAmHmTHw1zVoksKVBhwne0vCsaNrkeYjGu68jqcPA16Dpu+fvqd9z+6d9oGgSRwnc7t/vEZtiVs9QuG2i7STwIDAQAB-----END PUBLIC KEY-----");
+  if (password.length > 100) {
+    document.form1.submit();
+  } else {
+    var final_password;
+    if (password.length != 32) {
+      final_password = hex_md5(password);
+    } else {
+      final_password = password;
+    }
+    var realpassword = encrypt.encrypt(final_password);
+    document.form1.password.value = realpassword;
+  }
+  document.form1.submit();
+}
+   </script> 
+</head>
+
+<body>
+<table width="983" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <td width="982" height="300" background="./出海人员动态跟踪管理系统登陆界面_files/MTS.jpg">&nbsp;</td>
+  </tr>
+  <tr>
+    <td height="176" bgcolor="#F3EFE6"><table width="100%" border="0" cellspacing="0">
+      <tbody><tr>
+        <td width="269" height="148" align="center" valign="middle" background="./出海人员动态跟踪管理系统登陆界面_files/dlk.jpg"><table width="96%" height="119" border="0" cellpadding="0" cellspacing="0">
+          <tbody><tr>
+            <td width="22%" height="33">&nbsp;</td>
+            <td colspan="2">&nbsp;</td>
+            <td width="15%">&nbsp;</td>
+          </tr>
+          <form name="form1" method="post" action="http://10.18.198.240:8080/MainServlet.action" onkeydown="if(event.keyCode==13)fnCheck()" target="submitframe"></form>
+		  <input type="hidden" id="fid" name="fid" value="F00.10.00.00.00">
+          <tr>
+            <td height="23">&nbsp;</td>
+            <td width="21%"><span class="STYLE26">用户名：</span> </td>
+            <td width="42%"><input name="userid" type="text" class="STYLE25" size="12" value="">
+            </td>
+            <td>&nbsp;</td>
+			
+          </tr>
+          <tr>
+            <td height="23">&nbsp;</td>
+            <td><span class="STYLE26">密&nbsp;&nbsp;&nbsp;码：</span></td>
+            <td><input name="password" type="password" class="STYLE25" size="12" value="">
+            </td>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="34">&nbsp;</td>
+            <td colspan="2" valign="middle"><div align="right"><img src="./出海人员动态跟踪管理系统登陆界面_files/dl.jpg" width="62" height="22" border="0" onclick="fnCheck()" style="cursor:hand"></div></td>
+            <td>&nbsp;</td>
+          </tr>
+        </tbody></table></td>
+        <td width="8" height="148" bgcolor="#F3EFE6"><img src="./出海人员动态跟踪管理系统登陆界面_files/bk.jpg" width="3" height="130"></td>
+        <td width="243" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td colspan="2"><img src="./出海人员动态跟踪管理系统登陆界面_files/1.jpg" width="201" height="23">&nbsp;<a href="http://10.18.198.240:8080/page.jsp?type=1&amp;id=" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/more.jpg" width="31" height="9" border="0"></a></td>
+          </tr>
+		  
+          <tr>
+            <td width="74%" height="20" valign="bottom"><a href="http://10.18.198.240:8080/page.jsp?id=554&amp;type=2" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 11月5-6日值班员</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2022-11-04</span></td>
+          </tr>
+		   <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom"><a href="http://10.18.198.240:8080/page.jsp?id=553&amp;type=2" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 10月29-30日值班员</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2022-10-29</span></td>
+          </tr>
+		   <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom"><a href="http://10.18.198.240:8080/page.jsp?id=552&amp;type=2" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 10月22-23日值班员</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2022-10-21</span></td>
+          </tr>
+		   <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom"><a href="http://10.18.198.240:8080/page.jsp?id=551&amp;type=2" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 10月15-16日值班人员</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2022-10-21</span></td>
+          </tr>
+		   <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom"><a href="http://10.18.198.240:8080/page.jsp?id=550&amp;type=2" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 值班电话</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2022-10-09</span></td>
+          </tr>
+		   <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+        </tbody></table></td>
+        <td width="8"><img src="./出海人员动态跟踪管理系统登陆界面_files/bk.jpg" width="3" height="130"></td>
+        <td width="253" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody><tr>
+            <td colspan="2"><img src="./出海人员动态跟踪管理系统登陆界面_files/2.jpg" width="211" height="23">&nbsp;<a href="http://10.18.198.240:8080/page.jsp?type=3&amp;id=" target="_blank" class="Black"><img src="./出海人员动态跟踪管理系统登陆界面_files/more.jpg" width="31" height="9" border="0"></a></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom">
+			<a href="http://10.18.198.240:8080/loadFile.jsp?urli=//download/09091701f.doc" target="_blank" class="black" title="天津人员跟踪卡（MTS卡）管理办法"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 天津人员跟踪卡（MTS卡）管理办法</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2009-09-17</span></td>
+          </tr>
+		  <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom">
+			<a href="http://10.18.198.240:8080/loadFile.jsp?urli=//download/09091702se.doc" target="_blank" class="black" title="湛江人员跟踪卡（MTS卡）管理办法"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 湛江人员跟踪卡（MTS卡）管理办法</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2009-09-17</span></td>
+          </tr>
+		  <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom">
+			<a href="http://10.18.198.240:8080/loadFile.jsp?urli=//download/09091703th.rar" target="_blank" class="black" title="天津地区相关流程"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 天津地区相关流程</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2009-09-17</span></td>
+          </tr>
+		  <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom">
+			<a href="http://10.18.198.240:8080/loadFile.jsp?urli=//download/09091704uy.rar" target="_blank" class="black" title="天津地区相关文件"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 天津地区相关文件</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2009-09-17</span></td>
+          </tr>
+		  <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          <tr>
+            <td width="74%" height="20" valign="bottom">
+			<a href="http://10.18.198.240:8080/loadFile.jsp?urli=//download/09091705thhfd.rar" target="_blank" class="black" title="湛江地区MTS卡相关流程"><img src="./出海人员动态跟踪管理系统登陆界面_files/bt.jpg"> <span class="longtext" style="width:160px"> 湛江地区MTS卡相关流程</span></a></td>
+            <td width="26%" valign="bottom"><span class="STYLE25" style="font-size:11px">2009-09-17</span></td>
+          </tr>
+		  <tr>
+            <td colspan="2" valign="top" height="2"><div align="center"><table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table></div></td>
+          </tr>
+          
+          
+        </tbody></table></td>
+        <td width="8"><img src="./出海人员动态跟踪管理系统登陆界面_files/bk.jpg" width="3" height="140"></td>
+        <td width="180">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td height="20"><span class="STYLE25">天津制证中心：022-66911144</span></td>
+    </tr>
+	<tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td height="20"><span class="STYLE25">湛江制证中心：0759-3910921
+</span></td>
+  </tr>
+  <tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td height="20"><span class="STYLE25">深圳制证中心：0755-26026655
+</span></td>
+  </tr>
+  <tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td height="20"><span class="STYLE25">上海制证中心：021-22833712
+</span></td>
+  </tr>
+	<tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td height="20"><span class="STYLE25">工作日运维：022-25809049</span></td>
+  </tr>
+	<tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td height="20"><span class="STYLE25"><font color="CE0000">节假日</font></span><span class="STYLE27"><font color="CE0000">运维</font></span><span class="STYLE25"><font color="CE0000">：请查看系统公告</font></span></td>
+  </tr>
+  	<tr>
+    <td height="3"><div align="center">
+		    <table width="92%" border="0" cellspacing="0" cellpadding="0">
+		      <tbody><tr>
+		        <td height="2" background="./出海人员动态跟踪管理系统登陆界面_files/ccmain_15.gif"></td>
+            </tr>
+            </tbody></table>
+        </div></td>
+    </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+  </tr>
+</tbody></table>
+         </td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+  <tr>
+    <td height="68" background="./出海人员动态跟踪管理系统登陆界面_files/bq.jpg"><table width="19%" height="44" border="0">
+      <tbody><tr>
+        <td><div align="center">
+          <select name="select" onchange="if(this.options[this.selectedIndex].value!=&#39;&#39;)window.open(this.options[this.selectedIndex].value)">
+            <option>--友情链接--</option>
+            <option value="http://www.cnooc.com.cn">中国海洋石油集团有限公司</option>
+            <option value="http://www.cnoocltd.com">中国海洋石油有限公司</option>
+          </select>
+          </div></td>
+      </tr>
+    </tbody></table></td>
+  </tr>
+</tbody></table>
+<iframe name="submitframe" style="display:none" src="./出海人员动态跟踪管理系统登陆界面_files/saved_resource.html"></iframe>
+<iframe name="sframe" style="display:none" src="./出海人员动态跟踪管理系统登陆界面_files/saved_resource(1).html"></iframe>
+
+
+</body></html>

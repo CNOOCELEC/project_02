@@ -1,0 +1,314 @@
+
+<!-- saved from url=(0042)http://10.18.198.240:8080/index_topbar.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>Untitled Document</title>
+
+<style type="text/css">
+  .warning {
+	  color:	red;
+  }
+.STYLE3 {color: #FFFFCC}
+</style>
+<script type="text/javascript">
+
+var ie55 = /MSIE ((5\.[56789])|([6789]))/.test( navigator.userAgent ) &&
+			navigator.platform == "Win32";
+
+if ( !ie55 ) {
+	window.onerror = function () {
+		return true;
+	};
+}
+
+function writeNotSupported() {
+	if ( !ie55 ) {
+		document.write( "<p class=\"warning\">" +
+			"This script only works in Internet Explorer 5.5" +
+			" or greater for Windows</p>" );
+	}
+}
+
+</script>
+<script type="text/javascript" src="./poslib.js"></script>
+<script type="text/javascript" src="./scrollbutton.js"></script>
+<script type="text/javascript" src="./menu4.js"></script>
+<script type="text/javascript" src="./globalutil.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var tmp, tmp2;
+var cssFile = "skin/custom.css";
+
+document.write("<link type=\"text/css\" rel=\"StyleSheet\" href=\"" + cssFile + "\" />" );
+
+// set default css file to use
+//Menu.prototype.cssText = cssText;
+Menu.prototype.cssFile = cssFile;
+
+var menuBar = new MenuBar();
+/*
+// 系统维护菜单
+var xtwh = new Menu();
+
+xtwh.add(tmp = new MenuItem("单位管理", ""));
+tmp.target = "_top";
+tmp.toolTip = "Tool Tip";
+
+xtwh.add(tmp = new MenuItem("用户管理", "sysman/user_manage.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+xtwh.add(tmp = new MenuItem("权限管理", "sysman/priv_manage.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+xtwh.add(new MenuSeparator);
+
+xtwh.add(tmp = new MenuItem("配置信息管理", ""));
+tmp.target = "mainFrame";
+
+var testButton = new MenuButton("系统维护", xtwh);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+
+
+// 证卡管理菜单
+var zkgl = new Menu();
+
+zkgl.add(tmp = new MenuItem("人员信息录入", ""));
+tmp.target = "_top";
+tmp.toolTip = "Tool Tip";
+
+zkgl.add(tmp = new MenuItem("人员信息审核", ""));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+zkgl.add(tmp = new MenuItem("人员信息维护", ""));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+zkgl.add(new MenuSeparator);
+var testButton = new MenuButton("证卡管理", zkgl);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+
+
+// 任务管理菜单
+var rwgl = new Menu();
+
+rwgl.add(tmp = new MenuItem("任务申请", "chrw/rwsq.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+rwgl.add(tmp = new MenuItem("任务维护", "chrw/rwwh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+rwgl.add(tmp = new MenuItem("作业区申请", "chrw/zyqsq.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+
+rwgl.add(new MenuSeparator);
+var testButton = new MenuButton("任务管理", rwgl);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+
+
+// 平台审核菜单
+var ptsh = new Menu();
+
+ptsh.add(tmp = new MenuItem("平台审核查询", "ptsh/ptsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ptsh.add(tmp = new MenuItem("预申请审核", "ptsh/ysqsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ptsh.add(tmp = new MenuItem("生产经理审核", "ptsh/scjlsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ptsh.add(tmp = new MenuItem("海上监督审核", "ptsh/hsjdsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ptsh.add(tmp = new MenuItem("油田总监审核", "ptsh/ytzjsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ptsh.add(new MenuSeparator);
+var testButton = new MenuButton("平台审核", ptsh);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+
+// 调度审核菜单
+var ddsh = new Menu();
+
+ddsh.add(tmp = new MenuItem("调度审核查询", "ddsh/ddsh.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ddsh.add(tmp = new MenuItem("人员行踪设定", "ddsh/xzsd.jsp"));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+ddsh.add(new MenuSeparator);
+var testButton = new MenuButton("调度审核", ddsh);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+
+
+// 查询统计菜单
+var cxtj = new Menu();
+
+cxtj.add(tmp = new MenuItem("出海人员记录", ""));
+tmp.target = "_top";
+tmp.toolTip = "Tool Tip";
+
+cxtj.add(tmp = new MenuItem("终端在线情况", ""));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+cxtj.add(tmp = new MenuItem("运维周报", ""));
+tmp.target = "mainFrame";
+tmp.toolTip = "Tool Tip";
+
+cxtj.add(new MenuSeparator);
+var testButton = new MenuButton("查询统计", cxtj);
+testButton.mnemonic = "F";
+menuBar.add(testButton);
+*/
+//动态权限菜单
+
+  var i = 0;var j=0;
+
+      j++;
+	  var F270300 = new Menu();
+      menuBar.add( tmp = new MenuButton("任务管理",F270300) );//if(j==1){var song = F270300.dispatchAction();alert(j);}
+
+      i++;
+	  F270300.add(tmp = new MenuItem("任务申请", "chrw/rwsq.jsp","F270301"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270300.add(tmp = new MenuItem("任务维护", "chrw/rwwh.jsp","F270302"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      j++;
+	  var F270400 = new Menu();
+      menuBar.add( tmp = new MenuButton("查询管理",F270400) );//if(j==1){var song = F270400.dispatchAction();alert(j);}
+
+      i++;
+	  F270400.add(tmp = new MenuItem("人员状态查询", "quarymanage/findpersonstate.jsp","F270403"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270400.add(tmp = new MenuItem("人员出海记录", "quarymanage/outsearecord.jsp","F270401"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270400.add(tmp = new MenuItem("作业设施当前人员组合查询", "countmanage/personalcount.jsp","F270404"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270400.add(tmp = new MenuItem("出海天数符合性查询", "zjfhx/fhxquery.jsp","F270413"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      j++;
+	  var F270500 = new Menu();
+      menuBar.add( tmp = new MenuButton("统计管理",F270500) );//if(j==1){var song = F270500.dispatchAction();alert(j);}
+
+      i++;
+	  F270500.add(tmp = new MenuItem("作业设施历史人员统计", "countmanage/historycount.jsp","F270504"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270500.add(tmp = new MenuItem("乘船／机人员统计", "quarymanage/byboatreportquary.jsp","F270502"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270500.add(tmp = new MenuItem("作业设施当前人员统计", "countmanage/workzone.jsp","F270503"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      j++;
+	  var F270700 = new Menu();
+      menuBar.add( tmp = new MenuButton("系统公告",F270700) );//if(j==1){var song = F270700.dispatchAction();alert(j);}
+
+      i++;
+	  F270700.add(tmp = new MenuItem("公告管理", "affiche/find_gg.jsp","F270701"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+      i++;
+	  F270700.add(tmp = new MenuItem("在线问答（用户）", "onlinecommunicate/userissue.jsp","F270703"));
+      tmp.target = "mainFrame";
+      tmp.toolTip = "Tool Tip";//if(i==1){var song = tmp.parentMenu;alert(song.id);}
+
+//alert(song);
+
+
+//]]>
+</script><link type="text/css" rel="StyleSheet" href="./custom.css">
+</head><body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0"><iframe name="loginframe" style="display:none" src="./saved_resource(1).html"></iframe>
+
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tbody><tr>
+    <td align="left" style="background:#e7f0ff url(images/top_03.gif) right no-repeat; border-bottom:#3c77d6 1px solid"><img src="./top2_01.gif" width="565" height="60"></td>
+  </tr> 
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="23">
+  <tbody><tr valign="top"> 
+    <td align="left" nowrap=""><font color="#000000" class="fonts"> </font> 
+      <table width="100%" border="0" cellspacing="0" cellpadding="0" height="20">
+          <tbody><tr ondblclick="javascript:resizeTop();"> 
+            <td> 
+              <script type="text/javascript">
+              menuBar.write();
+              </script><div class="menu-bar" id="-menu-cache-5"><span id="-menu-cache-6" unselectable="on" class="menu-button "><span unselectable="on" class="left"></span><span unselectable="on" class="middle">任务管理</span><span unselectable="on" class="right"></span></span><span id="-menu-cache-10" unselectable="on" class="menu-button "><span unselectable="on" class="left"></span><span unselectable="on" class="middle">查询管理</span><span unselectable="on" class="right"></span></span><span id="-menu-cache-16" unselectable="on" class="menu-button "><span unselectable="on" class="left"></span><span unselectable="on" class="middle">统计管理</span><span unselectable="on" class="right"></span></span><span id="-menu-cache-21" unselectable="on" class="menu-button "><span unselectable="on" class="left"></span><span unselectable="on" class="middle">系统公告</span><span unselectable="on" class="right"></span></span></div>
+              <script type="text/javascript">
+                writeNotSupported();
+              </script><p class="warning">This script only works in Internet Explorer 5.5 or greater for Windows</p>            </td>
+            <td class="menu-bar" align="right">              <span class="STYLE3">欢迎 钻井部调度 使用本系统！</span><a href="javascript:void(0)" style="color:#000000" onclick="rePass()">修改密码</a> <a href="javascript:void(0)" style="color:#000000" onclick="logout()">退出</a></td>
+            <td class="menu-bar" width="30px" align="center"><a href="javascript:resizeTop();"><img id="topctlimg" src="./vnup.gif" border="0"></a></td>
+          </tr>
+      </tbody></table>
+    </td>
+  </tr>
+</tbody></table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" height="3">
+  <tbody><tr valign="top" class="menu-bar-bottom-border"> 
+    <td align="left" nowrap=""> </td>
+  </tr>
+</tbody></table>
+
+<script language="javascript">
+setCookie("lastuser","zjb");//记录最后登陆user cookie
+function logout(){
+   top.location = "logout.jsp";
+   return;
+}
+function reLogon(){
+   var obj = new Object();
+   obj.win = window;
+   window.showModalDialog("reLogon.jsp",obj,"dialogHeight:15.2;dialogWidth:24.2;status:no;scroll:no;help:no;");
+}
+function rePass(){
+   window.showModalDialog("rePassword.jsp","","dialogHeight:15.2;dialogWidth:24.2;status:no;scroll:no;help:no;");
+}
+</script>
+
+</body></html>

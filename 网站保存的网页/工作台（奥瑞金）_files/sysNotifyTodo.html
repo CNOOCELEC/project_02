@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!-- saved from url=(0183)http://bpm.orgtech.cn:8088/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=listByGraphic&home=1&rowsize=3&isShowBtLable=0&LUIID=lui-id-51&dataType=todo&sortType=datetime&fdAppName= -->
+<html class="lui-mulit-zh-cn-html "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="renderer" content="webkit">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+	
+
+
+
+
+	
+
+
+
+
+<script type="text/javascript">
+var Com_Parameter = {
+	ContextPath:"/",
+	ResPath:"/resource/",
+	Style:"default",
+	JsFileList:new Array,
+	StylePath:"/resource/style/default/",
+	Lang:"zh-cn",
+	CurrentUserId:"17b2a7a1973d1f4c7bea5f44bb29c1c3",
+	Cache:1669122213632,
+	FirstDayInWeek: parseInt('1') - 1,
+	CalendarMinuteStep:parseInt('1'),
+	SessionExpireTip:"会话过期，请打开新页面重新登录后再提交本页面。",
+	ServiceNotAvailTip:"与服务器连接不通，请联系系统管理员或等会再试。",
+	Date_format:"yyyy-MM-dd",
+	DateTime_format:"yyyy-MM-dd HH:mm",
+	SoftDeleteEnableModules:"",
+	ComfirmDelete:"一旦选择了删除，所选记录的相关数据都会被删除，无法恢复！您确认要执行此删除操作吗？",
+	ComfirmSoftDelete:"您确定要将所选记录放入回收站吗？<br>",
+	OptSuccessInfo:"您的操作已成功！",
+	OptFailureInfo:"操作失败！",
+	clientType:"-1",
+	serverPrefix : "http://10.1.2.62",
+	smallMaxSize : "",
+	isSysMouring : "false"
+};
+</script>
+<script type="text/javascript" src="./domain.js"></script>
+<script type="text/javascript" src="./LUI.js"></script>
+<script type="text/javascript" src="./common.js"></script>
+<script type="text/javascript" src="./sea.js"></script>
+<script type="text/javascript">
+seajs.config({
+	themes : {
+    "icon": ["ui-ext/iceblue/style/icon.theme.css?theme=iceblue&key=icon"],
+    "iconfont": ["ui-ext/iceblue/style/iconfont.theme.css?theme=iceblue&key=iconfont"],
+    "module": ["ui-ext/iceblue/style/module.theme.css?theme=iceblue&key=module"],
+    "form": ["ui-ext/iceblue/style/form.theme.css?theme=iceblue&key=form"],
+    "common": ["ui-ext/iceblue/style/common.theme.css?theme=iceblue&key=common"],
+    "portal": ["ui-ext/iceblue/style/portal.theme.css?theme=iceblue&key=portal"],
+    "listview": ["ui-ext/iceblue/style/listview.theme.css?theme=iceblue&key=listview"],
+    "sns": ["ui-ext/iceblue/style/sns.theme.css?theme=iceblue&key=sns"],
+    "chart": ["ui-ext/iceblue/style/chart.theme.css?theme=iceblue&key=chart"],
+    "treefont": ["ui-ext/iceblue/style/treefont.theme.css?theme=iceblue&key=treefont"],
+    "dialog": ["ui-ext/iceblue/style/dialog.theme.css?theme=iceblue&key=dialog"],
+    "widget": ["ui-ext/iceblue/style/widget.theme.css?theme=iceblue&key=widget"],
+    "step": ["ui-ext/iceblue/style/step.theme.css?theme=iceblue&key=step"],
+    "zone": ["ui-ext/iceblue/style/zone.theme.css?theme=iceblue&key=zone"],
+    "profile": ["ui-ext/iceblue/style/profile.theme.css?theme=iceblue&key=profile"],
+    "calendar": ["ui-ext/iceblue/style/calendar.theme.css?theme=iceblue&key=calendar"],
+    "prompt": ["ui-ext/iceblue/style/listview.theme.css?theme=iceblue&key=listview"]
+},
+	paths: {
+		'lui': 'sys/ui/js'
+	},
+	alias: {
+		'lui/jquery': 'resource/js/jquery',
+		'lui/jquery-ui': 'resource/js/jquery-ui/jquery.ui'
+	},
+	preload: ['/resource/js/plugin-theme.js','/resource/js/plugin-lang.js'],
+	debug: true,
+ 	base: '',
+ 	env : {
+ 	 	contextPath: '',
+ 		now : '2022-11-25 15:46',
+ 		pageMaxWidth:'1200px',
+ 		pattern : {
+ 			date : 'yyyy-MM-dd', 
+ 			datetime : 'yyyy-MM-dd HH:mm',
+ 			time : 'HH:mm'
+ 		},
+ 		locale : "zh-cn",
+ 		config : {},
+ 		cache : 1669122213632
+ 	}
+});
+</script>
+
+
+	
+	
+	
+		<script type="text/javascript">
+			seajs.use([ 'lui/parser', 'lui/jquery', 'lui/dialog', 'theme!common', 'theme!icon','theme!iconfont' ],function(parser, $) {
+				$(document).ready(function() {
+					parser.parse();
+				});
+			}); 
+		</script><script charset="utf-8" async="" src="./plugin-theme.js"></script><script charset="utf-8" async="" src="./plugin-lang.js"></script>
+	
+
+
+
+<link rel="shortcut icon" href="http://bpm.orgtech.cn:8088/resource/customization/images/login_single_random/favicon.ico">
+
+<script src="./simple.js"></script>
+
+
+<title></title>
+<link charset="utf-8" rel="stylesheet" href="./common.theme.css"><link charset="utf-8" rel="stylesheet" href="./icon.theme.css"><link charset="utf-8" rel="stylesheet" href="./iconfont.theme.css"><script charset="utf-8" async="" src="./parser.js"></script><script charset="utf-8" async="" src="./jquery.js"></script><script charset="utf-8" async="" src="./dialog.js"></script><script charset="utf-8" async="" src="./export.js"></script><link charset="utf-8" rel="stylesheet" href="./portal.theme.css"><script charset="utf-8" async="" src="./str.js"></script><script charset="utf-8" async="" src="./topic.js"></script><script charset="utf-8" async="" src="./Evented.js"></script><link charset="utf-8" rel="stylesheet" href="./dialog.theme.css"><script charset="utf-8" async="" src="./lang.jsp"></script><script charset="utf-8" async="" src="./layout.js"></script><script charset="utf-8" async="" src="./base.js"></script><script charset="utf-8" async="" src="./env.js"></script><script charset="utf-8" async="" src="./overlay.js"></script><script charset="utf-8" async="" src="./actor.js"></script><script charset="utf-8" async="" src="./trigger.js"></script><script charset="utf-8" async="" src="./content.js"></script><script charset="utf-8" async="" src="./dragdrop.js"></script><script charset="utf-8" async="" src="./lang(1).jsp"></script><script charset="utf-8" async="" src="./crypto.js"></script><script charset="utf-8" async="" src="./Class.js"></script><script charset="utf-8" async="" src="./Template.js"></script><script charset="utf-8" async="" src="./loader.js"></script><link charset="utf-8" rel="stylesheet" href="./widget.theme.css"><script charset="utf-8" async="" src="./toolbar.js"></script><script charset="utf-8" async="" src="./element.js"></script><script charset="utf-8" async="" src="./suspend.js"></script><script charset="utf-8" async="" src="./ifDirection.js"></script><script charset="utf-8" async="" src="./authDirection.js"></script><script charset="utf-8" async="" src="./mapDirection.js"></script><script charset="utf-8" async="" src="./const.js"></script><script charset="utf-8" async="" src="./Spa.js"></script><script charset="utf-8" async="" src="./router.js"></script><script charset="utf-8" async="" src="./values.js"></script><script charset="utf-8" async="" src="./direction.js"></script><script charset="utf-8" async="" src="./hash.js"></script><script charset="utf-8" async="" src="./router-utils.js"></script><script charset="utf-8" async="" src="./router(1).js"></script><script charset="utf-8" async="" src="./const(1).js"></script><script charset="utf-8" async="" src="./create-route-map.js"></script></head>
+
+<body class=" ">
+	
+   
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<script>seajs.use(['theme!portal']);</script>
+	<link type="text/css" rel="stylesheet" href="./notify.css">
+	<script src="./domain(1).js"></script>
+	<script type="text/javascript">
+	   Com_IncludeFile("jquery.js");
+	</script>
+
+	<div class="lui_dataview_classic">
+			<!-- 如果是被KK集成，则显示最后登录时间和IP 苏轶 2010年6月28日 -->
+			
+			<!-- 如果是被KK集成，则显示最后登录时间和IP 苏轶 2010年6月28日 END -->
+            
+			
+			
+			     
+                 <!-- 消息部件顶部提醒内容（  “您有 N 条 需处理事项” 、邮件数量、 刷新图标 、快速审批图标   ）  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+            
+            
+            
+            
+            
+			
+				   
+				 
+				 
+				 
+				 
+			
+    
+		    
+			    
+			        <!-- 需处理待办 -->
+			        
+			        <!-- 是否需要显示“快速审批” （是） -->
+					 
+			    
+			    
+			    
+			    				    				    
+			    
+		        
+    
+    
+   
+
+
+
+
+    
+     <!-- #122562 15版本后调整了待办首页归类，导致没法精确的跳转，先给个默认首页 -->
+     
+        
+    
+     
+     
+                  
+
+
+<!-- 如果是单个分类类型，点击待处理事项时需要把分类id带过去 -->
+
+<div class="lui_dataview_classic_heading">
+
+    
+    <span id="lui_notify_todo_tip" class="lui_dataview_classic_icon"></span>
+    
+	<span class="lui_notify_count_tip">
+        
+		
+		
+		
+			您有
+			<b id="toViewCount">3</b> 条
+			
+		
+		
+			<a class="lui_notify_link_txt" onclick="Com_OpenNewWindow(this)" data-href="/sys/notify/index.jsp#j_path=%2Fprocess&amp;dataType=todo" target="_blank">
+			    需处理待办
+			</a>
+		
+	</span>
+	
+	
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	<span class="lui_refreshIcon"><a onclick="location.reload();onPublishPortalRefresh()"><img src="./refresh.png" alt="刷新"></a></span>
+	
+	
+	
+	
+	
+</div>
+			
+			
+			
+			
+
+			<!-- 待办显示类型:列表、图文、分类 -->
+			
+				 
+                     <!-- 渲染   图文类型  列表  -->
+
+
+
+	 
+	
+ 	<div class="lui_notify_graphic">
+		<div class="lui_notify_graphic_person">
+			
+			
+			
+				
+				
+			
+			<img style="border-radius: 50%;border: 1px solid #e2e2e2;height: 40px;width: 40px;" src="./image(1).jsp">
+		 </div>
+          <div id="lui_notify_title" style="padding-top: 2px;padding-left:50px;">
+                <a title="请审批[市场营销中心-销售管理部]魏方洲提交的流程：流程管理-天津奥瑞金-销售部魏方洲-销售滚动计划-三片罐" target="_blank" class="lui_notify_graphic_todo_title textEllipsis" style="" onclick="onNotifyClick(this,&#39;1&#39;)" data-href="/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=view&amp;fdId=184ada00346523a21cf9f5e430282337&amp;r=0.08479708509266104">
+					
+					
+					
+               		
+				    
+				    请审批[市场营销中心-销售管理部]魏方洲提交的流程：流程管理-天津奥瑞金-销售部魏方洲-销售滚动计划-三片罐 
+                 </a>
+              
+              <div class="lui_notify_graphic_todo_subhead" style="">
+              	 
+              		<span>魏方洲</span>
+              	 
+              	 <span> 2022-11-25 15:10</span>
+                <span class="lui_notify_modelname">流程管理</span>
+                
+               	
+               		
+               			<span> 处理节点：部门负责人</span>
+               		
+               		
+               	
+              </div>
+          </div>
+       <div style="clear: both;"></div>
+ 	</div>
+
+	 
+	
+ 	<div class="lui_notify_graphic">
+		<div class="lui_notify_graphic_person">
+			
+			
+			
+				
+				
+			
+			<img style="border-radius: 50%;border: 1px solid #e2e2e2;height: 40px;width: 40px;" src="./image(2).jsp">
+		 </div>
+          <div id="lui_notify_title" style="padding-top: 2px;padding-left:50px;">
+                <a title="请处理系统替您起草的文档：流程管理--马培培-销售订单评审-" target="_blank" class="lui_notify_graphic_todo_title textEllipsis" style="" onclick="onNotifyClick(this,&#39;1&#39;)" data-href="/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=view&amp;fdId=18483460316fadcc91b097b4452919ef&amp;r=0.08479708509266104">
+					
+					
+					
+               		
+				    
+				    请处理系统替您起草的文档：流程管理--马培培-销售订单评审- 
+                 </a>
+              
+              <div class="lui_notify_graphic_todo_subhead" style="">
+              	 
+              		<span>马培培</span>
+              	 
+              	 <span> 2022-11-17 09:48</span>
+                <span class="lui_notify_modelname">流程管理</span>
+                
+               	
+               		
+               			<span> 处理节点：起草节点</span>
+               		
+               		
+               	
+              </div>
+          </div>
+       <div style="clear: both;"></div>
+ 	</div>
+
+	 
+	
+		 
+	
+ 	<div class="lui_notify_graphic">
+		<div class="lui_notify_graphic_person">
+			
+			
+			
+				
+				
+			
+			<img style="border-radius: 50%;border: 1px solid #e2e2e2;height: 40px;width: 40px;" src="./image(2).jsp">
+		 </div>
+          <div id="lui_notify_title" style="padding-top: 2px;padding-left:50px;">
+                <a title="合同“马培培-发起的天津奥瑞金包装有限公司-合同评审-三片罐-.00大连真心罐头食品有限公司  ”在待登记状态，等待您前往PC端进行起草。" target="_blank" class="lui_notify_graphic_todo_title textEllipsis" style="color:#999;" onclick="onNotifyClick(this,&#39;1&#39;)" data-href="/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=view&amp;fdId=18417270ec9eabcefe3aa5a44f98aefc&amp;r=0.08479708509266104">
+					
+					
+					
+               		
+				    
+				    合同“马培培-发起的天津奥瑞金包装有限公司-合同评审-三片罐-.00大连真心罐头食品有限公司  ”在待登记状态，等待您前往PC端进行起草。 
+                 </a>
+              
+              <div class="lui_notify_graphic_todo_subhead" style="color:#999;">
+              	 
+              		<span>马培培</span>
+              	 
+              	 <span> 2022-10-27 09:55</span>
+                <span class="lui_notify_modelname">合同起草</span>
+                
+               	
+              </div>
+          </div>
+       <div style="clear: both;"></div>
+ 	</div>
+
+				
+				
+				
+			
+
+	</div>
+	
+<script type="text/javascript">
+domain.autoResize();
+</script>
+
+<script type="text/javascript">
+	function onNotifyClick(hrefObj,notifyType){
+		//待阅点击后及时消失
+		if(notifyType=='2'){
+			//当前行顶级节点
+			var p = $(hrefObj)[0].parentNode.parentNode;
+			p.style.display="none";
+			//待阅异步更新
+			setTimeout(function(){
+				reloadDatas();
+			},2000);
+			
+			//待阅portlet窗口数量刷新
+			var toViewCount = $('#toViewCount').html();
+			if(!isNaN(toViewCount)){
+				toViewCount = parseInt(toViewCount,10);
+				if(toViewCount > 0){
+					$('#toViewCount').html(toViewCount-1);
+					updatePortalNotifyTitleCount();
+				}
+			}
+			
+			var countObj=document.getElementById("notifyCount2");
+			var btnObj=document.getElementById("notifyBtn2");
+			if(countObj!=null){
+				if(!isNaN(countObj.innerText)){
+					var countInt=parseInt(countObj.innerText,10);
+					if(countInt>0)
+						$(countObj).text(countInt-1);
+				}
+			}
+			if(btnObj!=null){
+				var oldBtnVal=btnObj.value;
+				if(oldBtnVal.indexOf("(")>-1){
+					var labelName=oldBtnVal.substring(0,oldBtnVal.indexOf("("));
+					var countVar=oldBtnVal.substring(oldBtnVal.indexOf("(")+1,oldBtnVal.length-1);
+					if(!isNaN(countVar)){
+						var count=parseInt(countVar,10);
+						if(count>0){
+							btnObj.value=labelName+"("+(count-1)+")";
+						}
+					}
+				}
+			}	
+		}	
+		var href = $(hrefObj).data("href");
+		if(href) {
+			Com_OpenWindow(href);
+		}
+	}
+	//分类数量
+	function onNotifyCountClick(cateId,notifyType){
+		//待阅点击后及时消失
+		if(notifyType=='2'){
+			setTimeout(function(){
+				reloadDatas();
+			},1000);
+		}
+	}
+	function onPublishPortalRefresh(){
+		domain.call(window.parent,"fireEvent",[{
+			type:"topic", 
+			name:"portal.notify.refresh"
+		}]);
+	}
+	function updatePortalNotifyTitleCount(){
+		var count = $('#toViewCount').html() || 0;
+		if(!isNaN(count) && count>=0){
+			//跨域事件处理 
+			domain.call(window.parent,"fireEvent",[{
+				type:"topic", 
+				name:"portal.notify.title.count",
+				luiId:"lui-id-51",
+				count:count
+			}]);
+		}
+	}
+	function reloadDatas(){
+		var pWin = window.parent;
+		if(pWin && pWin.refreshNotifyData){
+			 pWin.refreshNotifyData();
+		}else{
+			location.reload();
+		}
+		onPublishPortalRefresh();
+	}
+	function refreshGlobalNotifyData(){
+		var key = 'lui-id-51';
+		if(window.parent && key){
+			var pWin = window.parent;
+			if(!pWin.notifyEventTargets){
+				pWin.notifyEventTargets = {};
+				pWin.notifyEventTargets[key]=location;
+			}else if(pWin.notifyEventTargets){
+				pWin.notifyEventTargets[key]=location;
+			}
+			pWin.refreshNotifyData = function(){
+				for(var prop in pWin.notifyEventTargets){
+					if(pWin.notifyEventTargets[prop]){
+						pWin.notifyEventTargets[prop].reload();
+					}
+				}
+			}
+		}
+	}
+	seajs.use(['lui/jquery','lui/topic'], function($ , topic) {
+		//审批等操作完成后，自动刷新列表
+		topic.subscribe('successReloadPage', function() {
+			reloadDatas();
+		}); 
+	});
+	//统一门户列表中待办数量
+	$(document).ready(function(){
+		// 更新部件页签的数字角标
+		updatePortalNotifyTitleCount();
+		//定义全局刷新事件
+		refreshGlobalNotifyData();
+	});
+	
+	
+</script>
+
+  
+
+
+
+
+
+
+
+</body></html>

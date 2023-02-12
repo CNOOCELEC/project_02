@@ -1,0 +1,81 @@
+
+<!-- saved from url=(0042)http://10.18.198.240:8080/main_toolbar.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<title>Content &amp; Operation</title>
+
+<meta content="MSHTML 6.00.2900.2668" name="GENERATOR">
+
+<link rel="stylesheet" href="./custom.css" type="text/css">
+<script type="text/javascript" src="./globalutil.js"></script>
+<script type="text/javascript" src="./tabpane.js"></script>
+<script type="text/javascript" src="./tabmenu.js"></script>
+
+<script language="javascript">
+function mouseover(img)
+{
+  img.className = "notice-img-hover";
+}
+
+function mouseout(img)
+{
+  img.className = "notice-img-normal";
+}
+
+function mousedown(img)
+{ 
+  img.className = "notice-img-down";
+}
+
+function mouseup(img)
+{
+  return mouseout(img);
+}
+</script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="100%" height="25" cellpadding="0" cellspacing="0" border="0">
+	<tbody><tr class="notice-title" ondblclick="javascript:resizeWorkArea()">
+		<td valign="middle" align="center" width="5" height="24">
+		<div id="showtoc" name="showtoc" style="display:none;">
+    <table onclick="top.leftFrame.leftTopFrame.showtoc();" align="left" border="0" cellpadding="0" cellspacing="0" title="Show TOC" style="cursor:hand">
+      <tbody><tr>
+        <td height="20"><img width="5" height="20" src="./1pix(1).gif"></td>
+        <td height="20" valign="middle"><img title="Show TOC" border="0" src="./showtoc.gif"></td>
+        <td height="20"><img width="5" height="20" src="./1pix(1).gif"></td>
+        <td height="20" valign="middle" nowrap="" class="text">show toc</td>
+      </tr>
+    </tbody></table>
+    </div>
+		</td>
+		<td valign="middle" align="center" width="12"><a href="javascript:resizeWorkArea()"><img src="./actions.gif" border="0"></a></td>
+		<td valign="middle" align="left" width="60" height="25" nowrap="" class="text">内容和操作</td>
+		<td id="doubleclickcolumn" title="双击最大化" valign="middle" align="right" width="*" height="25" nowrap="" class="text">
+		<table height="25" cellpadding="0" cellspacing="0" border="0">
+			<tbody><tr>
+              <td valign="middle" align="right" width="24"> <a href="javascript:top.workareaFrame.mainFrame.location.reload();"> 
+      <img class="notice-img-normal" src="./refresh_enabled.gif" onmouseover="src=&#39;images/refresh_highlighted.gif&#39;;mouseover(this)" onmouseout="src=&#39;images/refresh_enabled.gif&#39;;mouseout(this)" onmousedown="src=&#39;images/refresh_highlighted.gif&#39;;mousedown(this)" onmouseup="src=&#39;images/refresh_enabled.gif&#39;;mouseup(this)" alt="刷新" title="刷新"></a> </td>
+			</tr>
+		</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+<script type="text/javascript">
+  function addSubMenu(text, saction, id){
+    //alert('xx');
+    tabmenu.addSubMenu(text, saction, id);
+  }
+  
+  function showTab(){
+    tabmenu.show();
+    setupAllTabs();
+  }
+  
+  function disposeTab(){
+    tabmenu.dispose();
+  }
+</script>
+
+</body></html>

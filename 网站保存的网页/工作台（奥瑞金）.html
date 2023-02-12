@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://bpm.orgtech.cn:8088/sys/portal/page.jsp?pageId=17d60a766b93455e850e1404e4a8caee -->
+<html class="lui-mulit-zh-cn-html "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<meta name="renderer" content="webkit">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+	
+
+
+
+
+	
+
+
+
+
+<script type="text/javascript">
+var Com_Parameter = {
+	ContextPath:"/",
+	ResPath:"/resource/",
+	Style:"default",
+	JsFileList:new Array,
+	StylePath:"/resource/style/default/",
+	Lang:"zh-cn",
+	CurrentUserId:"17b2a7a1973d1f4c7bea5f44bb29c1c3",
+	Cache:1669122213632,
+	FirstDayInWeek: parseInt('1') - 1,
+	CalendarMinuteStep:parseInt('1'),
+	SessionExpireTip:"会话过期，请打开新页面重新登录后再提交本页面。",
+	ServiceNotAvailTip:"与服务器连接不通，请联系系统管理员或等会再试。",
+	Date_format:"yyyy-MM-dd",
+	DateTime_format:"yyyy-MM-dd HH:mm",
+	SoftDeleteEnableModules:"",
+	ComfirmDelete:"一旦选择了删除，所选记录的相关数据都会被删除，无法恢复！您确认要执行此删除操作吗？",
+	ComfirmSoftDelete:"您确定要将所选记录放入回收站吗？<br>",
+	OptSuccessInfo:"您的操作已成功！",
+	OptFailureInfo:"操作失败！",
+	clientType:"-1",
+	serverPrefix : "http://10.1.2.62",
+	smallMaxSize : "",
+	isSysMouring : "false"
+};
+</script>
+<script type="text/javascript" src="./工作台（奥瑞金）_files/domain.js"></script>
+<script type="text/javascript" src="./工作台（奥瑞金）_files/LUI.js"></script>
+<script type="text/javascript" src="./工作台（奥瑞金）_files/common.js"></script>
+<script type="text/javascript" src="./工作台（奥瑞金）_files/sea.js"></script>
+<script type="text/javascript">
+seajs.config({
+	themes : {
+    "icon": ["ui-ext/iceblue/style/icon.theme.css?theme=iceblue&key=icon"],
+    "iconfont": ["ui-ext/iceblue/style/iconfont.theme.css?theme=iceblue&key=iconfont"],
+    "module": ["ui-ext/iceblue/style/module.theme.css?theme=iceblue&key=module"],
+    "form": ["ui-ext/iceblue/style/form.theme.css?theme=iceblue&key=form"],
+    "common": ["ui-ext/iceblue/style/common.theme.css?theme=iceblue&key=common"],
+    "portal": ["ui-ext/iceblue/style/portal.theme.css?theme=iceblue&key=portal"],
+    "listview": ["ui-ext/iceblue/style/listview.theme.css?theme=iceblue&key=listview"],
+    "sns": ["ui-ext/iceblue/style/sns.theme.css?theme=iceblue&key=sns"],
+    "chart": ["ui-ext/iceblue/style/chart.theme.css?theme=iceblue&key=chart"],
+    "treefont": ["ui-ext/iceblue/style/treefont.theme.css?theme=iceblue&key=treefont"],
+    "dialog": ["ui-ext/iceblue/style/dialog.theme.css?theme=iceblue&key=dialog"],
+    "widget": ["ui-ext/iceblue/style/widget.theme.css?theme=iceblue&key=widget"],
+    "step": ["ui-ext/iceblue/style/step.theme.css?theme=iceblue&key=step"],
+    "zone": ["ui-ext/iceblue/style/zone.theme.css?theme=iceblue&key=zone"],
+    "profile": ["ui-ext/iceblue/style/profile.theme.css?theme=iceblue&key=profile"],
+    "calendar": ["ui-ext/iceblue/style/calendar.theme.css?theme=iceblue&key=calendar"],
+    "prompt": ["ui-ext/iceblue/style/listview.theme.css?theme=iceblue&key=listview"]
+},
+	paths: {
+		'lui': 'sys/ui/js'
+	},
+	alias: {
+		'lui/jquery': 'resource/js/jquery',
+		'lui/jquery-ui': 'resource/js/jquery-ui/jquery.ui'
+	},
+	preload: ['/resource/js/plugin-theme.js','/resource/js/plugin-lang.js'],
+	debug: true,
+ 	base: '',
+ 	env : {
+ 	 	contextPath: '',
+ 		now : '2022-11-25 15:46',
+ 		pageMaxWidth:'1200px',
+ 		pattern : {
+ 			date : 'yyyy-MM-dd', 
+ 			datetime : 'yyyy-MM-dd HH:mm',
+ 			time : 'HH:mm'
+ 		},
+ 		locale : "zh-cn",
+ 		config : {},
+ 		cache : 1669122213632
+ 	}
+});
+</script>
+
+
+	
+	
+	
+		<script type="text/javascript">
+			seajs.use([ 'lui/parser', 'lui/jquery', 'lui/dialog', 'theme!common', 'theme!icon','theme!iconfont' ],function(parser, $) {
+				$(document).ready(function() {
+					parser.parse();
+				});
+			}); 
+		</script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/plugin-theme.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/plugin-lang.js"></script>
+	
+
+
+
+<link rel="shortcut icon" href="http://bpm.orgtech.cn:8088/resource/customization/images/login_single_random/favicon.ico">
+
+		<script type="text/javascript">
+			seajs.use(['theme!list', 'theme!form','theme!portal']);
+		</script>
+		<title>工作台（奥瑞金）</title>
+	<link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/common.theme.css"><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/icon.theme.css"><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/iconfont.theme.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/parser.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/dialog.js"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/listview.theme.css"><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/form.theme.css"><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/portal.theme.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/str.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/topic.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/Evented.js"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/dialog.theme.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/lang.jsp"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/layout.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/base.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/env.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/overlay.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/actor.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/trigger.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/content.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/dragdrop.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/refreshTodo.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/crypto.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/Class.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/Template.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/loader.js"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/widget.theme.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/toolbar.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/element.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/suspend.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/ifDirection.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/authDirection.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/mapDirection.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/const.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/Spa.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/router.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/values.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/direction.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/hash.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/router-utils.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/router(1).js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/const(1).js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/create-route-map.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/popup.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/source.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/render.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/panel.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/portal.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/vspace.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/top.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/topAdapter.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/lang(1).jsp"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/videoResize.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/panel(1).js"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/calendar_portletx.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/calendar_portletx.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/calendar.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/lang(2).jsp"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/lang(3).jsp"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/calendar.theme.css"><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/fullcalendar.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/termCalendar.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/jquery.ui.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/fullcalendar.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/dateUtil.js"></script><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/config.jsp"></script><link charset="utf-8" rel="stylesheet" href="./工作台（奥瑞金）_files/jquery.ui.css"><script charset="utf-8" async="" src="./工作台（奥瑞金）_files/jquery.ui-zh-CN.js"></script></head>
+	<body class="tTemplate">
+		
+		<div class="lui_portal_header" style="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var userName = '马培培';
+var loginName = 'mapeipei';
+var dept = '销售部';
+var telphone = '13072006687';
+var email = '';
+var title = '物料描述';
+var licenseId = '17ae6c223a864cba919460c42f3baa46';
+</script>
+
+<div class="lui_portal_header_simple_frame_h"></div>
+<div class="lui_portal_header_simple_frame">
+	
+<div class="lui_portal_head_notice" style="display: none;">
+	<div class="lui_portal_head_notic_box"><div style="width:1100px;overflow:hidden;height:20px;position:absolute;"><span class="lui_portal_head_notic_content" style="left:0;"></span></div><i class="close">x</i></div>
+       <script>
+       	Com_IncludeFile("jquery.js", null, "js");
+        </script><script id="jquery_js" src="./工作台（奥瑞金）_files/jquery.js"></script>
+
+       <script>
+           $(function(){
+        	   var $luiPortalHeadNotice = $(".lui_portal_head_notice");
+        	   var $luiPortalHeaderZoneFrame = $('.lui_portal_header_zone_frame');
+        	   var $luiPortalHeaderZoneFrameH = $(".lui_portal_header_zone_frame_h");
+        	   $(".lui_portal_head_notice .close").click(function(){
+        		   $luiPortalHeadNotice.hide();
+        		   $luiPortalHeaderZoneFrameH.css({height:''});
+        		   $luiPortalHeaderZoneFrame.removeClass('has-noticebar');
+        	   });
+        	   var url = Com_Parameter.ContextPath+'sys/portal/sys_portal_notice/sysPortalNotice.do?method=getPortalNotice';
+               $.post(url,function(data){
+                   if(data.isShow=="1"){
+                	   $(".lui_portal_head_notice span").html(data.docContent);
+                	   $luiPortalHeadNotice.show();
+                       $luiPortalHeaderZoneFrame.removeClass('has-noticebar').addClass('has-noticebar');
+                       if($luiPortalHeaderZoneFrame.height() > 0)
+                    	  $luiPortalHeaderZoneFrameH.css({'height':$luiPortalHeaderZoneFrame.height()+'px'}); 
+                       
+                       var noticContWidth = $(".lui_portal_head_notic_content").width();
+                       if(noticContWidth>=1000){
+                     	  $(".lui_portal_head_notic_content").css("left","550px");
+     	                  var timer = setInterval(function(){
+     	                	   if($(".lui_portal_head_notice").css("display")==="none"){
+     	                		   clearInterval(timer);
+     	                	   }
+     	                	   var compTime = 20;
+     	                	   var runNum =Math.floor(compTime/(0.042));
+     	                	   var speedPx = Math.floor(noticContWidth/runNum);
+     		            	   var noticLeft = $(".lui_portal_head_notic_content").position().left;
+     		            	   if(noticLeft<=(0-noticContWidth)){
+     		            		   $(".lui_portal_head_notic_content").css("left","550px");
+     		            	   }else{
+     		            		   $(".lui_portal_head_notic_content").css("left",(noticLeft-speedPx)+"px");
+     		            	   }
+     	               	  },42);  
+                       }else{
+                     	  $(".lui_portal_head_notic_box").width(noticContWidth+100);
+                       }
+                       
+                   }else{
+                	   $luiPortalHeadNotice.hide();
+                   }
+               },"json").error(function(){
+            	   $luiPortalHeadNotice.hide();
+               });       
+           });
+       </script>
+</div>
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>window.__POPS_TARGET__="17b2a7a1973d1f4c7bea5f44bb29c1c3"</script>
+
+
+
+<script type="text/javascript">
+seajs.use(['lui/jquery','lui/dialog'],function($,dialog){
+	window.setPersonDefaultPortal = function(fdPortalId,fdPortalName,obj){
+		var $statusTarget = $(obj).find('.default-icon');
+		var flag;
+		if($statusTarget.hasClass('default-icon-solid')){
+			flag = false;
+		}else{
+			flag = true;
+		}
+		var url = '/sys/portal/sys_portal_person_default/sysPortalPersonDefault.do?method=setDefault';
+		$.ajax({
+			type : "POST",
+			url :url,
+			data : {fdPortalId:fdPortalId,fdPortalName:fdPortalName,flag:flag},
+			dataType : 'json',
+			success : function(result) {
+				if($statusTarget.hasClass('default-icon-solid')){
+					$statusTarget.removeClass('default-icon-solid');
+					$statusTarget.addClass('default-icon-line');
+					dialog.success("取消成功！");
+				}else{
+					$(".lui_dataview_treemenu_flat").find('.default-icon').each(function(){
+						if($(this).hasClass('default-icon-solid')){
+							$(this).removeClass('default-icon-solid');
+							$(this).addClass('default-icon-line');
+						}
+					});
+					$statusTarget.removeClass('default-icon-line');
+					$statusTarget.addClass('default-icon-solid');
+					dialog.success("设置成功！");
+				}
+			},
+			error : function(result) {
+			}
+		});
+	};
+});
+</script>
+	
+
+
+	<div style="width: 100%;min-width:980px;max-width:100%;" class="lui_portal_header_simple_content clearfloat">
+		<div class="lui_portal_header_simple_portal">
+			
+		</div>
+		<div class="lui_portal_header_simple_person">
+		    
+			
+		    
+			
+			
+				<div class="lui_portal_header_notify">
+					
+						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="lui_portal_header_text">
+		<div title="待审" onclick="window.open(&#39;/sys/notify?dataType=todo#j_path=%2Fprocess&#39;,&#39;_blank&#39;)" class="lui_portal_header_daiban_div">
+			<div class="lui_icon_s lui_icon_s_daiban" style="vertical-align: text-top;"></div>
+			<div id="__notify_daiban__" class="lui_portal_header_daiban">3</div>
+		</div>
+		<div title="待阅" onclick="window.open(&#39;/sys/notify?dataType=toview#j_path=%2Fread&#39;,&#39;_blank&#39;)" class="lui_portal_header_daiyue_div">
+			<div class="lui_icon_s lui_icon_s_daiyue" style="vertical-align: text-top;"></div>
+			<div id="__notify_daiyue__" class="lui_portal_header_daiyue">54</div>
+		</div>
+	</div>
+<script>
+
+seajs.use(['lui/topic','lui/refreshTodo'], function(topic,refreshTodo) {
+	LUI.ready(function(){ 
+		 
+		var refreshTime = parseInt("");
+		if(isNaN(refreshTime) || refreshTime<1){
+			refreshTime = 0;
+		}
+		
+		var refreshNotify = function(init){
+			LUI.$.getJSON(Com_Parameter.ContextPath + "sys/notify/sys_notify_todo/sysNotifyTodo.do?method=sumTodoCount",function(json){
+				if(json!=null){
+					LUI.$("#__notify_daiban__").html(json.type_1==null?0:json.type_1);
+					LUI.$("#__notify_daiyue__").html(json.type_2==null?0:json.type_2);				
+				}
+			});
+			if(init){
+				refreshTime =init;
+			}
+			if(refreshTime>0)
+				window.setTimeout(refreshNotify,refreshTime*1000*60);
+		}; 
+		topic.subscribe('portal.notify.refresh',function(){ 
+			refreshNotify();
+		});
+		
+		var refreshCallBack = function(){ 
+			//执行刷新
+			refreshNotify(0);
+			//让所有子部件中有监听该属性的执行对应的操作
+			var iframes=document.getElementsByTagName("iframe");
+			if(iframes){  
+				for(var i=0;i<iframes.length;i++) 
+				{   
+					var iframeInfo =$(iframes[i]);
+					var src = iframeInfo.attr('src'); 
+					if(src && src.indexOf('sys/notify/sys_notify_todo/sysNotifyTodo.do?method=list') > -1){  
+						iframeInfo.attr('src', iframeInfo.attr('src')); 
+					} 
+				} 
+			}
+		} 
+		//第一个参数是执行待办刷新，第二个参数是初始化参数。
+		refreshTodo.initRefreshTodo(refreshCallBack,refreshNotify);
+		
+	});
+});
+</script>
+				</div>
+			
+			
+			
+				<div class="lui_portal_header_userinfo">
+					
+
+
+
+
+
+
+<div data-lui-switch-class="lui_portal_header_text_over" class="lui_portal_header_text" onclick="window.open(&#39;/sys/person/sys_person_zone/sysPersonZone.do?method=view&#39;,&#39;_blank&#39;)">
+	<span class="lui_portal_header_welcome">欢迎您</span>&nbsp;
+	<span class="lui_portal_header_username">马培培</span>
+	<div class="lui_icon_s lui_portal_header_icon_arrow"></div>
+	
+</div>
+	
+				</div>
+			
+		</div>
+	</div>
+	<div class="lui_portal_header_simple_menu_wrapper">
+		<div style="width: 100%;min-width:980px;max-width:100%;" class="lui_portal_header_simple_menu clearfloat">
+			<div class="lui_portal_header_simple_logo">
+				<div class="lui_portal_header_logo_div" onclick="location.href=&#39;/&#39;" title="返回首页"><img class="lui_portal_header_logo_img" src="./工作台（奥瑞金）_files/17d608e12451630d890d7694a14ac1e8.png"></div>
+			</div>
+			<div class="lui_portal_header_simple_switch">
+				
+
+
+
+
+<div data-lui-type="lui/base!DataView" style="" id="lui-id-3" class="lui-component" data-lui-cid="lui-id-3" data-lui-parse-init="2"><div class="lui_portal_header_menu_l"><div class="lui_portal_header_menu_r"><div class="lui_portal_header_menu_c"><div class="lui_portal_header_menu_item_div"><div class="lui_portal_header_menu_item_left" style="display: none;"></div><div class="lui_portal_header_menu_item_frame" style="width: 100%;"><div class="lui_portal_header_menu_item_body" style="white-space: nowrap;"><div style="display: inline-block;vertical-align: top;" data-portal-id="17d60a766b70e82c7668c5a46839e586" class="lui_portal_header_menu_item_div"><div class="lui_portal_header_menu_item_l"><div class="lui_portal_header_menu_item_r"><div class="lui_portal_header_menu_item_c">信息门户</div></div></div></div><div class="lui_portal_header_menu_item_line" style="display: inline-block;vertical-align: top;"></div><div style="display: inline-block;vertical-align: top;" data-portal-id="17d60a766b93455e850e1404e4a8caee" class="lui_portal_header_menu_item_current"><div class="lui_portal_header_menu_item_l"><div class="lui_portal_header_menu_item_r"><div class="lui_portal_header_menu_item_c">工作台</div></div></div></div></div></div><div class="lui_portal_header_menu_item_right" style="display: none;"></div></div></div></div></div></div>
+			</div>
+			
+				<div class="lui_portal_header_simple_search">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="lui_portal_header_search_include" class="lui_portal_header_search_include" onmouseover="showCategory()" onmouseout="hideCategory()" style="display: block;">
+		<div class="lui_portal_header_search_input  ">
+			<div class="lui_portal_header_search_keyword_l">
+				<div class="lui_portal_header_search_keyword_r">
+					<div class="lui_portal_header_search_keyword_c">
+						
+						<input type="text" placeholder="找人、搜知识、查会议" name="SEARCH_KEYWORD" onkeydown="if (event.keyCode == 13 &amp;&amp; this.value !=&#39;&#39;) __portal_search__full();">
+					</div>
+				</div>
+			</div>
+			     <div id="searchCategory" class="searchCategory" onmouseover="showCategory()" onmouseout="hideCategory()" style="display: none;">
+            <div id="searchAll" class="search_item">
+			 				<label>
+			 					<span class="search_radio">
+					 				<input name="search" type="radio" id="searchAll" value="searchAll" checked="checked">	
+					 				<i class="item_radio"></i>
+				 				</span>
+				 				<span class="search_text">全部</span>
+			 				</label>
+			 	</div>
+			 	 <div id="searchPeople" class="search_item">
+				 			<label>
+				 				<span class="search_radio">
+					 				<input name="search" type="radio" id="searchPeople" value="searchPeople">
+					 				<i class="item_radio"></i>
+				 				</span>
+				 				<span class="search_text">人员</span>
+				 			</label>
+			 	</div>
+			 	 <div id="searchModel" class="search_item">
+			 			<label>
+			 				<span class="search_radio">
+				 				<input name="search" type="radio" id="searchApp" value="searchModel">
+				 				<i class="item_radio"></i>
+			 				</span>
+			 				<span class="search_text">应用</span>
+			 			</label>
+			 	</div>
+	</div> 
+		</div>
+		<div class="lui_portal_header_search_btn search_btn_icon">
+	        <div class="lui_portal_header_search_full_l">
+				<div class="lui_portal_header_search_full_r">
+					<div class="lui_portal_header_search_full_c">
+						<input type="button" value="搜全系统" onclick="__portal_search__full()">
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="lui_portal_header_search_btn" id="_SEARCH_MODEL_" style="display: none">
+			<div class="lui_portal_header_search_model_l">
+				<div class="lui_portal_header_search_model_r">
+					<div class="lui_portal_header_search_model_c">
+						<input type="button" value="搜本模块" onclick="__portal_search__()">
+					</div>
+				</div>
+			</div>
+		</div>    
+    </div>
+
+	<script>
+		var newLUI="true";
+		var separator = false ? "&" : "#";
+		
+		if("false" == "true"){
+	 		document.getElementById("lui_portal_header_search_include").style.display='none';
+		}else{ 
+			document.getElementById("lui_portal_header_search_include").style.display='block'; 
+		}	
+		function __portal_search__(){
+			var keyField = document.getElementsByName("SEARCH_KEYWORD")[0];
+			if(keyField.value==""){
+				keyField.focus();
+				return;
+			}else{
+				if(typeof(DB_SEARCH) == "undefined"){
+					var searchHost = ""
+					if(searchHost!=""){
+						var url = '';
+					}else{
+						var url = Com_Parameter.ContextPath+"sys/ftsearch/searchBuilder.do?method=search&queryString=";
+					}
+					url = url + encodeURIComponent(keyField.value);
+					url = url + "&newLUI=" + newLUI;
+					url = url + "&modelName=" + encodeURIComponent(SYS_SEARCH_MODEL_NAME);
+					url = url + "&seq=" + Math.random();
+					window.open(url,"_blank");
+				}else{//重定向为数据库搜索
+					db_search(keyField.value);
+				}
+			}
+		}
+		function __portal_search__full(){
+			 var searchFlag = $("input[name=search]:checked").val();
+			var keyField = document.getElementsByName("SEARCH_KEYWORD")[0];
+			if(keyField.value==""){
+				keyField.focus();
+				return;
+			}else{
+				if("searchAll" == searchFlag){
+				var searchHost = ""
+				if(searchHost!=""){
+					var url = '';
+				}else{
+					var url = Com_Parameter.ContextPath+"sys/ftsearch/searchBuilder.do?method=search&queryString=";
+				}
+				url = url + encodeURIComponent(keyField.value);
+				url = url + "&newLUI=" + newLUI;
+				url = url + "&seq=" + Math.random();
+				url = url + "&searchAll=true";
+				window.open(url,"_blank");
+				}
+				if("searchPeople" == searchFlag){
+					if (keyField.value == null || trim(keyField.value) == "") {
+						seajs.use('lui/dialog', function (dialog) {
+							// 请输入内容
+							dialog.alert("请输入搜索词", function () {
+								$("#topKeyword").focus();
+							});
+						});
+					}else{
+						var url = Com_Parameter.ContextPath + 'sys/zone/sys_zone_personInfo/sysZonePersonInfo.do?method=getPersons';
+							url = url + "&fdSearchName="+encodeURIComponent(trim(keyField.value))+"&searchPeople=true";
+							window.open(url,"_blank");
+							}
+
+					
+				}
+				if("searchModel" == searchFlag){
+					if (keyField.value == null || trim(keyField.value) == "") {
+						seajs.use('lui/dialog', function (dialog) {
+							// 请输入内容
+							dialog.alert("请输入搜索词", function () {
+								$("#topKeyword").focus();
+							});
+						});
+					}else{
+						var url = Com_Parameter.ContextPath + 'sys/common/searchModel.jsp?query='+encodeURIComponent(trim(keyField.value));
+						url=url+"&searchModel=true";
+						window.open(url,"_blank");
+					}
+				}
+				
+			} 
+		}
+		
+		function showCategory(){
+			
+			if($('#_SEARCH_MODEL_').css('display')=="none"){
+				$("#searchCategory").show();
+			}
+		}
+		function hideCategory(){
+			if($('#_SEARCH_MODEL_').css('display')=="none"){
+			$("#searchCategory").hide();
+			}
+		}
+		
+		
+		function trim(str){ //删除左右两端的空格
+		　　     return str.replace(/(^\s*)|(\s*$)/g, "");
+		　　 }
+		
+		var SYS_SEARCH_MODEL_NAME;
+   		LUI.ready(function(){
+   			$("#searchCategory").hide();
+   			if(SYS_SEARCH_MODEL_NAME != null){
+   				LUI.$("#_SEARCH_MODEL_").show();
+   			}
+   			var itEnabled = "false";
+   			if(itEnabled=='true'){
+   				$('.lui_portal_header_search_intell .icon_robot').click(function(){
+   					Com_OpenWindow("",'_blank');
+   	   			});
+   			}
+   			
+   		});
+   		
+   		
+
+   		
+   		
+	</script>
+				</div>
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var messagetips='当前用户邮箱为空';
+Com_IncludeFile("ticketcode.js",'/sys/portal/designer/js/',"js",true);
+</script><script id="ticketcode_js" src="./工作台（奥瑞金）_files/ticketcode.js"></script><script id="tag_js" src="./工作台（奥瑞金）_files/tag.js"></script><link rel="stylesheet" href="./工作台（奥瑞金）_files/tag.css">
+
+
+</div><script>seajs.use(['lui/jquery','theme!portal'],function($){$('.lui_portal_header').show();});</script> 
+		
+		
+			<div class="lui_list_left_sidebar_frame lui_list_left_sidebar_td" style="top: 90px;">
+				<div class="lui_list_left_sidebar_innerframe">
+					<div class="lui_portal_sidebar_h_l">
+						<div class="lui_portal_sidebar_h_r">
+							<div class="lui_portal_sidebar_h_c">	
+							</div>
+						</div>
+					</div>
+					<div class="lui_portal_sidebar_c_l">
+						<div class="lui_portal_sidebar_c_r">
+							<div class="lui_portal_sidebar_c_c">							
+								 
+  <div id="p_4bfce01cfa2959c0699b" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_4bfce01cfa2959c0699b" data-lui-parse-init="5">	
+
+
+   
+  <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-7" class="lui-component" data-lui-cid="lui-id-7" data-lui-parse-init="7">	
+
+
+    <div data-lui-type="lui/base!DataView" style="" id="lui-id-9" class="lui-component" data-lui-cid="lui-id-9" data-lui-parse-init="9"><div class="lui_dataview_html_div" style="min-height:25px;overflow-y:hidden;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="lui_person_usertitle">
+    <div>
+    
+     	<div id="sys_person_userpic" class="lui_person_userpic" style="cursor: pointer;">
+			<img src="./工作台（奥瑞金）_files/image.jsp" id="sys_person_userpic_img">	
+			<div id="sys_person_usermask" class="lui_person_usermask" style="white-space: nowrap; ">
+	    		更换头像
+	    	</div>
+		</div>
+		
+    </div>
+    <div class="lui_person_author" style="text-align: center;padding: 5px 10px;">
+		 
+	    	<a class="com_author" href="http://bpm.orgtech.cn:8088/sys/person/setting.do?setting=sys_zone_person_info" target="_blank">
+	    
+    	马培培
+	     
+	    	</a>
+	    	
+    </div>
+    <div class="lui_person_dept">
+    	<span>销售部</span>
+    </div>
+    <div class="clr"></div>
+</div>
+<script>
+	seajs.use(['lui/jquery', 'lui/topic'],function($, topic){
+		$(function(){
+			var setting = Com_GetUrlParameter(location.href,'setting');
+			if(setting != 'sys_zone_person_photo'){
+				var pic = $('#sys_person_userpic'),
+				 	mask = $('#sys_person_usermask');
+				pic.css('cursor','pointer');
+				pic.click(function(){
+					var url='/sys/person/setting.do?setting=sys_zone_person_photo'+ "&j_iframe=true&j_aside=false";
+					LUI.pageOpen(url, '_rIframe');
+					//window.open('/sys/person/setting.do?setting=sys_zone_person_photo');
+				}).mouseover(function(){
+					mask.show();
+				}).mouseout(function(){
+					mask.hide();
+				});
+			}
+			
+			topic.subscribe('lui.crop.success', function(data) {
+				if(data && data.modelId) {
+					if(data.modelId == '17b2a7a1973d1f4c7bea5f44bb29c1c3') {
+						var img = $('#sys_person_userpic_img');
+						var src = img.attr("src");
+						if(src) {
+							var _s = Com_SetUrlParameter(src, "s_time" , new Date().getTime());
+							img.attr("src", _s);
+						}
+					}
+				}
+			})
+		});
+	});
+</script>
+</div></div>
+   </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div> 
+  <div id="p_eba867d8b62de088545a" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_eba867d8b62de088545a" data-lui-parse-init="12">	
+
+
+   
+  <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-13" class="lui-component" data-lui-cid="lui-id-13" data-lui-parse-init="14">	
+
+
+    <div data-lui-type="lui/base!DataView" style="" id="lui-id-15" class="lui-component" data-lui-cid="lui-id-15" data-lui-parse-init="16"><div class="lui_list_nav_frame"><div id="lui-id-89" class="lui-component" data-lui-cid="lui-id-89" style="display: block;"><div class="lui_accordionpanel_frame"><div class="lui_accordionpanel_content_frame"><div class="lui_accordionpanel_header_l"><div class="lui_accordionpanel_header_r"><div class="lui_accordionpanel_header_c"><div class="lui_accordionpanel_nav_l" data-lui-mark="panel.nav.head" style="cursor: pointer;"><div class="lui_accordionpanel_nav_r"><div class="lui_accordionpanel_nav_c"><span class="lui_accordionpanel_nav_text" title="常用模块" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">常用模块</span></span><span data-lui-mark="panel.nav.toggle" class="lui_accordionpanel_toggle_up" data-lui-switch-class="lui_accordionpanel_toggle_down">&nbsp;</span></div></div></div></div></div></div><div class="lui_accordionpanel_content_l"><div class="lui_accordionpanel_content_r"><div class="lui_accordionpanel_content_c" data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div id="lui-id-91" class="lui-component" data-lui-type="lui/panel!Content" data-lui-cid="lui-id-91" style="display: block;"><ul class="lui_list_nav_list"><li class="lui_list_nav_selected"><a title="流程管理"><i class="icon iconfont_nav lui_iconfont_nav_km_review"></i><span title="流程管理">流程管理</span></a></li><li><a title="合同管理"><i class="icon iconfont_nav lui_iconfont_nav_km_agreement"></i><span title="合同管理">合同管理</span></a></li><li><a title="事前申请"><i class="icon iconfont_nav lui_iconfont_nav_fssc_fee"></i><span title="事前申请">事前申请</span></a></li><li><a title="费用报销"><i class="icon iconfont_nav lui_iconfont_nav_fssc_expense"></i><span title="费用报销">费用报销</span></a></li><li><a title="付款管理"><i class="icon iconfont_nav lui_iconfont_nav_fssc_payment"></i><span title="付款管理">付款管理</span></a></li><li><a title="预算管理"><i class="icon iconfont_nav lui_iconfont_nav_fssc_budget"></i><span title="预算管理">预算管理</span></a></li><li><a title="会议管理"><i class="icon iconfont_nav lui_iconfont_nav_km_imeeting"></i><span title="会议管理">会议管理</span></a></li><li><a title="规范制度"><i class="icon iconfont_nav lui_iconfont_nav_km_institution"></i><span title="规范制度">规范制度</span></a></li><li><a title="新闻管理"><i class="icon iconfont_nav lui_iconfont_nav_sys_news"></i><span title="新闻管理">新闻管理</span></a></li><li><a title="常用资料"><i class="icon iconfont_nav lui_iconfont_nav_km_comminfo"></i><span title="常用资料">常用资料</span></a></li><li><a title="工作沟通"><i class="icon iconfont_nav lui_iconfont_nav_km_collaborate"></i><span title="工作沟通">工作沟通</span></a></li></ul></div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div></div><div class="lui_accordionpanel_footer_l"><div class="lui_accordionpanel_footer_r"><div class="lui_accordionpanel_footer_c"></div></div></div></div><div class="lui_accordionpanel_content_frame"><div class="lui_accordionpanel_header_l"><div class="lui_accordionpanel_header_r"><div class="lui_accordionpanel_header_c"><div class="lui_accordionpanel_nav_l" data-lui-mark="panel.nav.head" style="cursor: pointer;"><div class="lui_accordionpanel_nav_r"><div class="lui_accordionpanel_nav_c"><span class="lui_accordionpanel_nav_text" title="我的流程" data-lui-mark="panel.nav.title"><span class="lui_tabpanel_navs_item_title">我的流程</span></span><span data-lui-mark="panel.nav.toggle" class="lui_accordionpanel_toggle_up" data-lui-switch-class="lui_accordionpanel_toggle_down">&nbsp;</span></div></div></div></div></div></div><div class="lui_accordionpanel_content_l"><div class="lui_accordionpanel_content_r"><div class="lui_accordionpanel_content_c" data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div id="lui-id-93" class="lui-component" data-lui-type="lui/panel!Content" data-lui-cid="lui-id-93" style="display: block;"><ul class="lui_list_nav_list"><li><a title="新建流程"><i class="icon iconfont_nav lui_iconfont_nav_km_review"></i><span title="新建流程">新建流程</span></a></li><li><a title="待办流程"><i class="icon iconfont lui_iconfont_navleft_books_input"></i><span title="待办流程">待办流程</span></a></li><li><a title="已办流程"><i class="icon iconfont lui_iconfont_navleft_com_file"></i><span title="已办流程">已办流程</span></a></li><li><a title="我发起的"><i class="icon iconfont_nav lui_iconfont_nav_kms_wiki"></i><span title="我发起的">我发起的</span></a></li><li><a title="流程授权"><i class="icon iconfont lui_iconfont_navleft_com_query"></i><span title="流程授权">流程授权</span></a></li><li><a title="流程草稿"><i class="icon iconfont_nav"></i><span title="流程草稿">流程草稿</span></a></li></ul></div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div></div><div class="lui_accordionpanel_footer_l"><div class="lui_accordionpanel_footer_r"><div class="lui_accordionpanel_footer_c"></div></div></div></div></div></div></div></div>
+   </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div> 
+ 
+							</div>
+						</div>
+					</div>
+					<div class="lui_portal_sidebar_f_l">
+						<div class="lui_portal_sidebar_f_r">
+							<div class="lui_portal_sidebar_f_c">	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="lui_list_body_scroll_mask"></div>
+		
+		<div class="lui_list_body_frame" style="margin-top: 90px;">
+			  
+  <table width="1014" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-18" class="lui-component" data-lui-cid="lui-id-18" data-lui-parse-init="19">
+    
+   <tbody> 
+    <tr> 
+     <td valign="top" width="753" data-lui-type="lui/portal!Container" id="lui-id-19" class="lui-component" data-lui-cid="lui-id-19" data-lui-parse-init="20">  
+      <div id="p_c722ba221b82fe4a67f6" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_c722ba221b82fe4a67f6" data-lui-parse-init="21">	
+
+
+       
+      <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 70px;"><div data-lui-type="lui/panel!Content" style="min-height: 70px;" id="lui-id-21" class="lui-component" data-lui-cid="lui-id-21" data-lui-parse-init="23">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-23" class="lui-component" data-lui-cid="lui-id-23" data-lui-parse-init="25"><div class="lui_dataview_picmenulist"><div title="发起流程" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_60"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">发起流程</div></div></div></div></div><div title="事前申请" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_32"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">事前申请</div></div></div></div></div><div title="合同管理" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_28"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">合同管理</div></div></div></div></div><div title="个人借款" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_49"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">个人借款</div></div></div></div></div><div title="费用报销" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_67"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">费用报销</div></div></div></div></div><div title="付款管理" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_20"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">付款管理</div></div></div></div></div><div title="更多" data-lui-switch-class="lui_dataview_picmenu_more_on" class="lui_dataview_picmenu_more" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_more"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">更多</div></div></div></div></div></div></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>  </td> 
+     <td width="10" style="min-width:10px;"> </td> 
+     <td valign="top" width="251" data-lui-type="lui/portal!Container" id="lui-id-26" class="lui-component" data-lui-cid="lui-id-26" data-lui-parse-init="28">  
+      <div id="p_890b001da7e7b66b198d" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_890b001da7e7b66b198d" data-lui-parse-init="29">	
+
+
+       
+      <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 70px;"><div data-lui-type="lui/panel!Content" style="min-height: 70px;" id="lui-id-28" class="lui-component lui_panel_ext_padding" data-lui-cid="lui-id-28" data-lui-parse-init="31">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-30" class="lui-component" data-lui-cid="lui-id-30" data-lui-parse-init="33"><div class="lui_dataview_emotion"><div class="lui_dataview_emotion_date"><h5><span>2022年11月25日</span><span>周五</span></h5><h4>18:53:14</h4></div><div class="lui_dataview_emotion_line"></div><div class="lui_dataview_emotion_tips" cfg-times="17:00_19:00"><p>今天白天到夜间运动指数：适宜。</p></div></div></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>  </td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <div style="height: 8px; display: none;" data-lui-type="lui/vspace!VSpace" id="lui-id-33" class="lui-component" data-lui-cid="lui-id-33" data-lui-parse-init="36"> 
+  </div> 
+  <table width="1014" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-34" class="lui-component" data-lui-cid="lui-id-34" data-lui-parse-init="37">
+    
+   <tbody> 
+    <tr> 
+     <td width="1014" valign="top" data-lui-type="lui/portal!Container" id="lui-id-35" class="lui-component" data-lui-cid="lui-id-35" data-lui-parse-init="38"></td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <div style="height: 8px; display: none;" data-lui-type="lui/vspace!VSpace" id="lui-id-36" class="lui-component" data-lui-cid="lui-id-36" data-lui-parse-init="39"> 
+  </div> 
+  <table width="1014" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-37" class="lui-component" data-lui-cid="lui-id-37" data-lui-parse-init="40">
+    
+   <tbody> 
+    <tr> 
+     <td width="1014" valign="top" data-lui-type="lui/portal!Container" id="lui-id-38" class="lui-component" data-lui-cid="lui-id-38" data-lui-parse-init="41">  
+      <div id="p_863c4eb974faf048d9ed" data-lui-type="lui/panel!NonePanel" style="" class="lui-component" data-lui-cid="p_863c4eb974faf048d9ed" data-lui-parse-init="42">	
+
+
+       
+      <div class="lui_nonepanel_frame">		<div class="lui_nonepanel_transparent">			<div class="lui_nonepanel_content" data-lui-mark="panel.contents">			<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 450px;"><div data-lui-type="lui/panel!Content" style="min-height: 450px;" id="lui-id-40" class="lui-component" data-lui-cid="lui-id-40" data-lui-parse-init="44">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-42" class="lui-component" data-lui-cid="lui-id-42" data-lui-parse-init="46"><div class="lui_dataview_html_div" style="min-height:450px;overflow-y:hidden;">
+
+
+<script>
+ function getDemo_position(){
+      // $(".lui_dataview_html_div").on('DOMNodeInserted', function(e) { 
+      //   console.log(e) 
+      //   var test = document.getElementById("demo_qingjia");
+      //   if(test){
+      //     console.log("test",test)
+      //   }
+      // }); 
+
+      clearTimeout(t)
+      var t = setTimeout(function(){
+        var test = document.getElementById("demo_qingjia");
+        var position = test.getBoundingClientRect();
+        console.log(position)
+        var left = position.x;
+        var top = position.y;
+        $(".dgi-main-position_1").css("left",left+30);
+        $(".dgi-main-position_1").css("top",top);
+      },1000)
+   
+  }
+  getDemo_position();
+
+  $(window).resize(function(){
+    getDemo_position();
+  })
+</script>
+<style type="text/css">body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wpp_main {
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    width: 100%;
+    height: auto;
+}
+
+.wpp_main_content {
+    margin-left: 6px;
+    margin-right: 6px;
+    padding-bottom: 6px;
+    position: relative;
+}
+.wpp_content {
+    background: url("https://demo.landray.com.cn/xyt/img/EKP_work_bg01@2x.png");
+    background-size: cover;
+    height: 432px;
+    width: 100%;
+    padding-bottom: 6px;
+    border-top: 1px solid #F2F2F2;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.wpp_content_item {
+    width: 220px;
+    height: 372px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 9px -2px rgba(171, 175, 186, 0.2);
+    border-radius: 2px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 3%;
+    display: inline-block;
+    /*    float: left; 相当于display: inline-block; +  vertical-align: top;*/
+    vertical-align: top;
+    transition: all 0.3s;
+    margin-bottom: 20px;
+}
+
+.wpp_content_item:first-child{
+    margin-left: 0;
+}
+
+.wpp_content_item:hover {
+    /* transform: scale(1.05, 1.05);
+    transition: all 0.6s; */
+    margin-top: 4px;
+    transition: all 0.3s;
+}
+
+.wpp_content_item span {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 0px 0px 2px 2px;
+    display: block;
+    color: #ffffff;
+}
+
+.item_span_1 {
+    background: linear-gradient(90deg, rgba(117, 124, 142, 1) 0%, rgba(79, 86, 109, 1) 100%);
+}
+
+.item_span_2 {
+    background: linear-gradient(270deg, rgba(58, 179, 157, 1) 0%, rgba(13, 196, 164, 1) 100%);
+}
+
+.item_span_3 {
+    background: linear-gradient(90deg, rgba(87, 150, 255, 1) 0%, rgba(66, 133, 244, 1) 100%);
+}
+
+.item_span_4 {
+    background: linear-gradient(90deg, rgba(102, 114, 230, 1) 0%, rgba(89, 86, 204, 1) 100%);
+}
+
+.wpp_content_item ul li {
+    width: 150px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: rgba(244, 245, 247, 1);
+    border-radius: 17px;
+    margin: 16px auto;
+}
+
+.wpp_content_item ul li a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.wpp_content_item ul li a:hover {
+    color: #4285F4;
+}
+
+.first_child {
+    margin-top: 24px !important;
+}
+
+.wpp_content_quickLink {
+    position: absolute;
+    right: -1px;
+    top: 60px;
+    z-index: 1000;
+    margin: 0px;
+    padding: 0px;
+    width: 80px;
+}
+
+.wpp_content_quickLink a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.wpp_content_quickLink ul li {
+    width: 80px;
+    height: 80px;
+    /* line-height: 80px; */
+    text-align: center;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 8px 9px -2px rgba(171, 175, 186, 0.2);
+    border-radius: 2px 0px 0px 2px;
+    overflow: hidden;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.wpp_content_quickLink .icon {
+    width: 36px;
+    height: 28px;
+    margin: 0 auto;
+    margin-top: 13px;
+}
+
+.wpp_content_quickLink ul li span {
+    margin-top: 2px;
+    display: block;
+}
+
+.icon_1 {
+    background: url("https://demo.landray.com.cn/xyt/img/ekp_home_icon_ekp_normal@2x.png");
+    background-size: cover;
+}
+
+.icon_2 {
+    background: url("https://demo.landray.com.cn/xyt/img/ekp_home_icon_problem_normal@2x.png");
+    background-size: cover;
+}
+
+.icon_3 {
+    background: url("https://demo.landray.com.cn/xyt/img/ekp_home_icon_data_normal@2x.png");
+    background-size: cover;
+}
+
+.icon_4 {
+    background: url("https://demo.landray.com.cn/xyt/img/ekp_home_icon_function_normal@2x.png");
+    background-size: cover;
+}
+
+
+@-webkit-keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
+
+
+.wpp_content_item_1 {
+    -webkit-animation: fadeInDown .5s ease-in-out 0s 1 both;
+    -moz-animation: fadeInDown .5s ease-in-out 0s 1 both;
+    -ms-animation: fadeInDown .5s ease-in-out 0s 1 both;
+    -o-animation: fadeInDown .5s ease-in-out 0s 1 both;
+    animation: fadeInDown .5s ease-in-out 0s 1 both;
+}
+
+.wpp_content_item_2 {
+    -webkit-animation: fadeInDown .6s ease-in-out 0s 1 both;
+    -moz-animation: fadeInDown .6s ease-in-out 0s 1 both;
+    -ms-animation: fadeInDown .6s ease-in-out 0s 1 both;
+    -o-animation: fadeInDown .6s ease-in-out 0s 1 both;
+    animation: fadeInDown .6s ease-in-out 0s 1 both;
+}
+
+.wpp_content_item_3 {
+    -webkit-animation: fadeInDown .7s ease-in-out 0s 1 both;
+    -moz-animation: fadeInDown .7s ease-in-out 0s 1 both;
+    -ms-animation: fadeInDown .7s ease-in-out 0s 1 both;
+    -o-animation: fadeInDown .7s ease-in-out 0s 1 both;
+    animation: fadeInDown .7s ease-in-out 0s 1 both;
+}
+
+.wpp_content_item_4 {
+    -webkit-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -moz-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -ms-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -o-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    animation: fadeInDown .8s ease-in-out 0s 1 both;
+}
+
+.wpp_content_quickLink {
+    display:none;
+    -webkit-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -moz-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -ms-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    -o-animation: fadeInDown .8s ease-in-out 0s 1 both;
+    animation: fadeInDown .8s ease-in-out 0s 1 both;
+}
+
+.wpp_content_quickLink ul li a:hover {
+    color: #4285F4;
+}
+.wpp_content_quickLink ul li:hover{
+    width: 92px;
+    margin-left: -12px;
+    transition: all 0.3s;
+}
+
+
+.wpp_content_quickLink ul li a:hover .icon_1 {
+    background: url("./img/ekp_home_icon_ekp_hover@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_quickLink ul li a:hover .icon_2 {
+    background: url("./img/ekp_home_icon_problem_hover@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_quickLink ul li a:hover .icon_3 {
+    background: url("./img/ekp_home_icon_data_hover@2x.png");
+    background-size: cover;
+}
+
+
+.wpp_content_quickLink ul li a:hover .icon_4 {
+    background: url("./img/ekp_home_icon_function_hover@2x.png");
+    background-size: cover;
+}
+
+
+.wpp_content_quickLink ul li a:active .icon_1 {
+    background: url("./img/ekp_home_icon_ekp_highlight@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_quickLink ul li a:active{
+        color: #2F6DD4;
+}
+
+.wpp_content_quickLink ul li a:active .icon_2 {
+    background: url("./img/ekp_home_icon_problem_highlight@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_quickLink ul li a:active .icon_3 {
+    background: url("./img/ekp_home_icon_data_highlight@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_quickLink ul li a:active .icon_4 {
+    background: url("./img/ekp_home_icon_function_highlight@2x.png");
+    background-size: cover;
+}
+
+.wpp_content_spanContent {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 15px 0 15px;
+}
+.wpp_subContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 92px;
+    text-align: center;
+}
+</style>
+<div class="wpp_main" id="wpp_main">
+<div class="wpp_main_content">
+<div class="wpp_header">&nbsp;</div>
+
+<div class="wpp_content">
+<div class="wpp_subContent">
+<div class="wpp_content_item wpp_content_item_1">
+<div><span class="item_span_4">业务</span></div>
+
+<ul>
+	<li class="first_child">
+	<div class="wpp_content_spanContent" title="合同申请"><a href="http://bpm.orgtech.cn:8088/km/agreement/index.jsp?j_module=true#j_path=%2FapplyClear" target="_blank">合同申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="销售订单申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf4562ac418882bf2dfba4be6aca8b&amp;s_css=default" target="_blank">销售订单申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="事前申请"><a href="http://bpm.orgtech.cn:8088/fssc/fee/index.jsp?j_module=true#mydoc=all&amp;j_path=%2FlistAll" target="_blank">事前申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="超期超信订单申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17b5e10ed4a3f3978061c484dbe873e3" target="_blank">超期超信订单申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="信用额度调整"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf45631074e51bdc5a9e446efbdff4" target="_blank">信用额度调整</a></div>
+	</li>
+</ul>
+</div>
+
+<div class="wpp_content_item wpp_content_item_2">
+<div><span class="item_span_3">财务</span></div>
+
+<ul>
+	<li class="first_child">
+	<div class="wpp_content_spanContent" title="费用报销申请"><a href="http://bpm.orgtech.cn:8088/fssc/expense/index.jsp?j_module=true#j_path=%2FlistCreate&amp;mydoc=create" target="_blank">费用报销申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="借款申请"><a href="http://bpm.orgtech.cn:8088/fssc/loan/fssc_loan_main/fsscLoanMain.do?method=add&amp;i.docTemplate=17d605ac473273a2a6ffed44c5f9cf5e" target="_blank">借款申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="资金付款申请"><a href="http://bpm.orgtech.cn:8088/fssc/payment/index.jsp?j_module=true#j_path=%2FlistAll&amp;mydoc=all" target="_blank">资金付款申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="开票申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf4582b8774cbae7adfb048b3ad826" target="_blank">开票申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="概预算申请"><a href="http://bpm.orgtech.cn:8088/fssc/budget/index.jsp?j_module=true" target="_blank">概预算申请</a></div>
+	</li>
+</ul>
+</div>
+
+<div class="wpp_content_item wpp_content_item_3">
+<div><span class="item_span_2">行政</span></div>
+
+<ul>
+	<li class="first_child">
+	<div class="wpp_content_spanContent" title="用印申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf457301f18627083efbc4078bc24b" target="_blank">用印申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="办公用品申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf45730f59d971713bb81442787444" target="_blank">办公用品申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="车辆维修保养申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf45736b726becb8a295f46d29d34c" target="_blank">车辆维修保养申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="出差报告"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf4572bc39643ed86c0444084b1ce7" target="_blank">出差报告</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="档案借阅申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf457326c6e29f6033ea64933aa948" target="_blank">档案借阅申请</a></div>
+	</li>
+</ul>
+</div>
+
+<div class="wpp_content_item wpp_content_item_4">
+<div><span class="item_span_1">人事</span></div>
+
+<ul>
+	<li>
+	<div class="wpp_content_spanContent" title="人事章用印申请表"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf456c9968b8242a81a4d4db787044" target="_blank">人事章用印申请表</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="劳动合同用印申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf456c8ceeb594d149aa1479296bc6" target="_blank">劳动合同用印申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="试用期转正申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf456c25f9283dca14d45474088e61" target="_blank">试用期转正申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="补卡申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf456c074769c72c8af0e423cbedb4" target="_blank">补卡申请</a></div>
+	</li>
+	<li>
+	<div class="wpp_content_spanContent" title="工作/收入证明申请"><a href="http://bpm.orgtech.cn:8088/km/review/km_review_main/kmReviewMain.do?method=add&amp;fdTemplateId=17cf456ca920d5b8c399d1447f2b17a1" target="_blank">工作/收入证明申请</a></div>
+	</li>
+</ul>
+</div>
+</div>
+
+<p>&nbsp;</p>
+</div>
+
+<div class="wpp_content_quickLink">
+<ul>
+	<li>
+	<div>
+	<div class="icon icon_1">&nbsp;</div>
+	<a href="https://demo.landray.com.cn/kms/multidoc/kms_multidoc_knowledge/kmsMultidocKnowledge.do?method=view&amp;fdId=1705c7908a9f5690a1fb5ab431b980b0" target="_blank"><span>了解EKP</span>                             </a></div>
+	</li>
+	<li>
+	<div>
+	<div class="icon icon_4">&nbsp;</div>
+	<a href="https://demo.landray.com.cn/kms/multidoc/#j_path=%2FdocCategory&amp;docCategory=1705c69e11b877b26bf4dc34d9d96471" target="_blank"><span>功能介绍</span>                             </a></div>
+	</li>
+	<li>
+	<div>
+	<div class="icon icon_2">&nbsp;</div>
+	<a href="https://demo.landray.com.cn/demo/feedback/#j_path=%2FdemoFeedbackProblem" target="_blank"><span>常见问题</span>                             </a></div>
+	</li>
+	<li>
+	<div>
+	<div class="icon icon_3">&nbsp;</div>
+	<a href="https://demo.landray.com.cn/map/map.jsp" target="_blank"><span>数据大屏</span>                             </a></div>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+<script src="./工作台（奥瑞金）_files/jquery.min.js"></script><script src="./工作台（奥瑞金）_files/data.js"></script><script src="./工作台（奥瑞金）_files/index.js"></script>
+
+<p><embed height="0" id="xunlei_com_thunder_helper_plugin_d462f475-c18e-46be-bd10-327458d045bd" type="application/thunder_download_plugin" width="0"></p></div></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>		</div>	</div></div>  </td> 
+    </tr> 
+   </tbody> 
+  </table> 
+  <div style="height: 8px;" data-lui-type="lui/vspace!VSpace" id="lui-id-45" class="lui-component" data-lui-cid="lui-id-45" data-lui-parse-init="49"> 
+  </div> 
+  <table width="1014" style="table-layout: fixed;" data-lui-type="lui/portal!VBox" id="lui-id-46" class="lui-component" data-lui-cid="lui-id-46" data-lui-parse-init="50">
+    
+   <tbody> 
+    <tr> 
+     <td width="677" valign="top" data-lui-type="lui/portal!Container" id="lui-id-47" class="lui-component" data-lui-cid="lui-id-47" data-lui-parse-init="51">  
+      <div id="p_b806ea916a4813e06cb7" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_b806ea916a4813e06cb7" data-lui-parse-init="52">	
+
+
+       
+       
+      <div class="lui_tabpanel_frame tabPanel_frame ">		<div class="lui_tabpanel_title" style="display: none; height: 0px;">			<span class="lui_tabpanel_title_icon"></span>			<span class="lui_tabpanel_title_main"></span>			<span class="lui_tabpanel_title_subtitle"></span>		</div>		<div class="lui_tabpanel_navs_l">			<div class="lui_tabpanel_navs_r">				<div class="lui_tabpanel_navs_c clearfloat">					<div style="max-width:49.9%;" class="lui_tabpanel_navs_item_l lui_tabpanel_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_navs_item_selected">						<div class="lui_tabpanel_navs_item_r">							<div class="lui_tabpanel_navs_item_c" data-lui-mark="panel.nav.title" title="待办"><div class=" lui_panel_hasCount_frame "><span class="lui_panel_title_main lui_tabpanel_navs_item_title">待办</span><span class="com_prompt_num">3</span></div></div>						</div>					</div>						<div style="max-width:49.9%;" class="lui_tabpanel_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_navs_item_selected">						<div class="lui_tabpanel_navs_item_r">							<div class="lui_tabpanel_navs_item_c" data-lui-mark="panel.nav.title" title="待阅"><div class=" lui_panel_hasCount_frame "><span class="lui_panel_title_main lui_tabpanel_navs_item_title">待阅</span><span class="com_prompt_num">54</span></div></div>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_content_l">			<div class="lui_tabpanel_content_r">				<div class="lui_tabpanel_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 248px;"><div data-lui-type="lui/panel!Content" style="min-height: 228px;" id="lui-id-49" class="lui-component" data-lui-cid="lui-id-49" data-lui-parse-init="54">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-51" class="lui-component lui_component_iframe_wrap" data-lui-cid="lui-id-51" data-lui-parse-init="56"><iframe width="100%" height="100%" allowtransparency="true" scrolling="no" frameborder="0" src="./工作台（奥瑞金）_files/sysNotifyTodo.html" style="height: 216px;"></iframe></div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-54" class="lui-component" data-lui-cid="lui-id-54" data-lui-parse-init="59">	
+
+
+        <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-56" class="lui-component" data-lui-cid="lui-id-56" data-lui-parse-init="61">	
+
+
+         
+         
+         
+         
+        </div>
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat">	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_footer_l">			<div class="lui_tabpanel_footer_r">				<div class="lui_tabpanel_footer_c">				</div>			</div>		</div>	</div></div> 
+      <div style="height: 8px;" data-lui-type="lui/vspace!VSpace" id="lui-id-59" class="lui-component" data-lui-cid="lui-id-59" data-lui-parse-init="64"> 
+      </div> 
+      <div id="p_ea3c6f1dc7ebf534402d" data-lui-type="lui/panel!TabPanel" style="" class="lui-component" data-lui-cid="p_ea3c6f1dc7ebf534402d" data-lui-parse-init="65">	
+
+
+       
+       
+      <div class="lui_tabpanel_frame tabPanel_frame ">		<div class="lui_tabpanel_title" style="display: none; height: 0px;">			<span class="lui_tabpanel_title_icon"></span>			<span class="lui_tabpanel_title_main"></span>			<span class="lui_tabpanel_title_subtitle"></span>		</div>		<div class="lui_tabpanel_navs_l">			<div class="lui_tabpanel_navs_r">				<div class="lui_tabpanel_navs_c clearfloat">					<div style="max-width:49.9%;" class="lui_tabpanel_navs_item_l lui_tabpanel_navs_item_selected" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_navs_item_selected">						<div class="lui_tabpanel_navs_item_r">							<div class="lui_tabpanel_navs_item_c" data-lui-mark="panel.nav.title" title="我发起的流程"><span class="lui_panel_title_main lui_tabpanel_navs_item_title">我发起的流程</span></div>						</div>					</div>						<div style="max-width:49.9%;" class="lui_tabpanel_navs_item_l" data-lui-mark="panel.nav.frame" data-lui-switch-class="lui_tabpanel_navs_item_selected">						<div class="lui_tabpanel_navs_item_r">							<div class="lui_tabpanel_navs_item_c" data-lui-mark="panel.nav.title" title="我已审的流程"><span class="lui_panel_title_main lui_tabpanel_navs_item_title">我已审的流程</span></div>						</div>					</div>								</div>			</div>		</div>		<div class="lui_tabpanel_content_l">			<div class="lui_tabpanel_content_r">				<div class="lui_tabpanel_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 198px;"><div data-lui-type="lui/panel!Content" style="min-height: 178px;" id="lui-id-61" class="lui-component" data-lui-cid="lui-id-61" data-lui-parse-init="67">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-63" class="lui-component" data-lui-cid="lui-id-63" data-lui-parse-init="69">	<table width="100%" class="lui_dataview_listtable_table">		<tbody><tr><td style="border-bottom:0;text-align:left;text-align:left" class="lui_dataview_listtable_firstTd "><a class="com_subject textEllipsis" title="信息系统服务申请单-北京奥瑞金-马培培-BPM" onclick="Com_OpenNewWindow(this)" data-href="/km/review/km_review_main/kmReviewMain.do?method=view&amp;fdId=184adbc9d1cf4f52e69c28a4ccd81f99" target="_blank">
+			       			 信息系统服务申请单-北京奥瑞金-马培培-BPM
+			       	    </a></td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width100">2022-11-25</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width60">流程中</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width80"><div class="textEllipsis width80" style="font-weight: bold;" title="尹一凡">
+			        尹一凡
+			    </div></td></tr><tr><td style="border-bottom:0;text-align:left;text-align:left" class="lui_dataview_listtable_firstTd "><a class="com_subject textEllipsis" title="流程管理-天津奥瑞金-销售部马培培-销售滚动计划-三片罐" onclick="Com_OpenNewWindow(this)" data-href="/km/review/km_review_main/kmReviewMain.do?method=view&amp;fdId=184ada8a554c88642bdd8d948c285d32" target="_blank">
+			       			 流程管理-天津奥瑞金-销售部马培培-销售滚动计划-三片罐
+			       	    </a></td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width100">2022-11-25</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width60">创建中</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width80"><div class="textEllipsis width80" style="font-weight: bold;" title="马培培">
+			        马培培
+			    </div></td></tr><tr><td style="border-bottom:0;text-align:left;text-align:left" class="lui_dataview_listtable_firstTd "><a class="com_subject textEllipsis" title="维护价格" onclick="Com_OpenNewWindow(this)" data-href="/km/review/km_review_main/kmReviewMain.do?method=view&amp;fdId=1848875c884238a28089d0e433dae1ce" target="_blank">
+			       			 维护价格
+			       	    </a></td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width100">2022-11-18</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width60">结束</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width80"><div class="textEllipsis width80" style="font-weight: bold;" title="&lt;无&gt;">
+			        &lt;无&gt;
+			    </div></td></tr><tr><td style="border-bottom:0;text-align:left;text-align:left" class="lui_dataview_listtable_firstTd "><a class="com_subject textEllipsis" title="流程管理-天津奥瑞金-销售部马培培-销售订单评审--三片罐-天津威盛食品有限公司" onclick="Com_OpenNewWindow(this)" data-href="/km/review/km_review_main/kmReviewMain.do?method=view&amp;fdId=184844e8d6e87a92603fcd34d3faa80a" target="_blank">
+			       			 流程管理-天津奥瑞金-销售部马培培-销售订单评审--三片罐-天津威盛食品有限公司
+			       	    </a></td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width100">2022-11-17</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width60">结束</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width80"><div class="textEllipsis width80" style="font-weight: bold;" title="&lt;无&gt;">
+			        &lt;无&gt;
+			    </div></td></tr><tr><td style="border-bottom:0;text-align:left;text-align:left" class="lui_dataview_listtable_firstTd "><a class="com_subject textEllipsis" title="流程管理--马培培-销售订单评审-" onclick="Com_OpenNewWindow(this)" data-href="/km/review/km_review_main/kmReviewMain.do?method=view&amp;fdId=1848346012398a81be2b2c640e2923ad" target="_blank">
+			       			 流程管理--马培培-销售订单评审-
+			       	    </a></td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width100">2022-11-17</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width60">创建中</td><td style="border-bottom:0;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;;" class="width80"><div class="textEllipsis width80" style="font-weight: bold;" title="马培培">
+			        马培培
+			    </div></td></tr>		</tbody>	</table></div>
+        
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" data-href="/sys/lbpmperson/index.jsp#j_path=%2Fcreate" target="_blank" onclick="Com_OpenNewWindow(this);" style="float:right">更多</a>	</div></div></div><div data-lui-mark="panel.content" style="display: none;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside"><div data-lui-type="lui/panel!Content" style="" id="lui-id-66" class="lui-component" data-lui-cid="lui-id-66" data-lui-parse-init="72">	
+
+
+        <div data-lui-type="lui/base!DataView" style="display:none;" id="lui-id-68" class="lui-component" data-lui-cid="lui-id-68" data-lui-parse-init="74">	
+
+
+         
+         
+         
+         
+        </div>
+        
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" data-href="/sys/lbpmperson/index.jsp#j_path=%2Fapproved" target="_blank" onclick="Com_OpenNewWindow(this);" style="float:right">更多</a>	</div></div></div></div>			</div>		</div>		<div class="lui_tabpanel_footer_l">			<div class="lui_tabpanel_footer_r">				<div class="lui_tabpanel_footer_c">				</div>			</div>		</div>	</div></div>  </td> 
+     <td width="16" style="min-width: 16px;"> </td> 
+     <td width="321" valign="top" data-lui-type="lui/portal!Container" id="lui-id-71" class="lui-component" data-lui-cid="lui-id-71" data-lui-parse-init="77">  
+      <div id="p_19c0944be61a42acdd8a" data-lui-type="lui/panel!Panel" style="" class="lui-component" data-lui-cid="p_19c0944be61a42acdd8a" data-lui-parse-init="78">	
+
+
+       
+      <div class="lui_panel_frame">		<div class="lui_panel_navs_l">			<div class="lui_panel_navs_r">				<div class="lui_panel_navs_c clearfloat" data-lui-mark="panel.nav.frame">					<div class="lui_panel_navs_item_l">						<div class="lui_panel_navs_item_r">							<div class="lui_panel_navs_item_c" data-lui-mark="panel.nav.title" title="我的日程"><span class="lui_panel_title_main lui_tabpanel_navs_item_title">我的日程</span></div>						</div>					</div>				</div>			</div>		</div>		<div class="lui_panel_content_l">			<div class="lui_panel_content_r">				<div class="lui_panel_content_c" data-lui-mark="panel.contents">				<div data-lui-mark="panel.content" style="display: block;"><div>	<div data-lui-mark="panel.content.inside" class="lui_panel_content_inside" style="min-height: 668px;"><div data-lui-type="lui/panel!Content" style="min-height: 648px;" id="lui-id-73" class="lui-component" data-lui-cid="lui-id-73" data-lui-parse-init="80">	
+
+
+        <div data-lui-type="lui/base!DataView" style="" id="lui-id-75" class="lui-component" data-lui-cid="lui-id-75" data-lui-parse-init="82"><div class="lui_dataview_html_div" style="min-height:648px;overflow-y:hidden;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="calendar_luiid75" class="lui_calendar_portlet lui-component" data-lui-cid="calendar_luiid75"><div class="lui_calendar_portlet_header">	<div class="lui_calendar_portlet_left" data-lui-mark="calendar_datetext">25</div>	<div class="lui_calendar_portlet_right">		<div class="lui_calendar_portlet_opt">			<div class="lui_calendar_portlet_today" data-lui-mark="calendar_today">				今天			</div>					<div class="lui_calendar_portlet_refresh" data-lui-mark="calendar_refresh">&nbsp;</div>		</div>		<div class="lui_calendar_portlet_monyear">			<span class="lui_calendar_opt_pre" data-lui-mark="calendar_pre">&lt;</span>			<span class="lui_calendar_portlet_monyeartext" data-lui-mark="calendar_monthyeartext">2022-11</span>  			 <span class="lui_calendar_opt_next" data-lui-mark="calendar_next">&gt;</span>		</div>			</div></div><div class="lui_calendar_portlet_body">	<table class="lui_calendar_portlet_table">		<thead class="lui_calendar_portlet_thead">			<tr class="lui_calendar_portlet_tr">									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName">日</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 一</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 二</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 三</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 四</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 五</th>									<th class="lui_calendar_portlet_td" data-lui-mark="calendar_weekName"> 六</th>							</tr>		</thead>		<tbody class="lui_calendar_portlet_tbody">																		<tr class="lui_calendar_portlet_tr first">																														<td class="lui_calendar_portlet_td lui_calendar_portlet_date pre muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-10-30"><div class="lui_date_box"><span class="lui_number">30</span><div class="lui_solar">初六</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date pre" data-lui-mark="calendar_date" data-lui-date="2022-10-31"><div class="lui_date_box"><span class="lui_number">31</span><div class="lui_solar lui_solar_holiday">万圣节</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-01"><div class="lui_date_box"><span class="lui_number">1</span><div class="lui_solar">初八</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-02"><div class="lui_date_box"><span class="lui_number">2</span><div class="lui_solar">初九</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-03"><div class="lui_date_box"><span class="lui_number">3</span><div class="lui_solar">初十</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-04"><div class="lui_date_box"><span class="lui_number">4</span><div class="lui_solar">十一</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-05"><div class="lui_date_box"><span class="lui_number">5</span><div class="lui_solar">十二</div></div></td>									</tr>																												<tr class="lui_calendar_portlet_tr">																				<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-06"><div class="lui_date_box"><span class="lui_number">6</span><div class="lui_solar">十三</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-07"><div class="lui_date_box"><span class="lui_number">7</span><div class="lui_solar lui_solar_term">立冬</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-08"><div class="lui_date_box"><span class="lui_number">8</span><div class="lui_solar">十五</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-09"><div class="lui_date_box"><span class="lui_number">9</span><div class="lui_solar">十六</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-10"><div class="lui_date_box"><span class="lui_number">10</span><div class="lui_solar">十七</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-11"><div class="lui_date_box"><span class="lui_number">11</span><div class="lui_solar">十八</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-12"><div class="lui_date_box"><span class="lui_number">12</span><div class="lui_solar">十九</div></div></td>									</tr>																												<tr class="lui_calendar_portlet_tr">																				<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-13"><div class="lui_date_box"><span class="lui_number">13</span><div class="lui_solar">二十</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-14"><div class="lui_date_box"><span class="lui_number">14</span><div class="lui_solar">廿一</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-15"><div class="lui_date_box"><span class="lui_number">15</span><div class="lui_solar">廿二</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-16"><div class="lui_date_box"><span class="lui_number">16</span><div class="lui_solar">廿三</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-17"><div class="lui_date_box"><span class="lui_number">17</span><div class="lui_solar">廿四</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-18"><div class="lui_date_box"><span class="lui_number">18</span><div class="lui_solar">廿五</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-19"><div class="lui_date_box"><span class="lui_number">19</span><div class="lui_solar">廿六</div></div></td>									</tr>																												<tr class="lui_calendar_portlet_tr">																				<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-20"><div class="lui_date_box"><span class="lui_number">20</span><div class="lui_solar">廿七</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-21"><div class="lui_date_box"><span class="lui_number">21</span><div class="lui_solar">廿八</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-22"><div class="lui_date_box"><span class="lui_number">22</span><div class="lui_solar lui_solar_term">小雪</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-23"><div class="lui_date_box"><span class="lui_number">23</span><div class="lui_solar">三十</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-24"><div class="lui_date_box"><span class="lui_number">24</span><div class="lui_solar lui_solar_holiday">感恩节</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date today" data-lui-mark="calendar_date" data-lui-date="2022-11-25"><div class="lui_date_box"><span class="lui_number">25</span><div class="lui_solar">初二</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-26"><div class="lui_date_box"><span class="lui_number">26</span><div class="lui_solar">初三</div></div></td>									</tr>																												<tr class="lui_calendar_portlet_tr">																				<td class="lui_calendar_portlet_td lui_calendar_portlet_date muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-11-27"><div class="lui_date_box"><span class="lui_number">27</span><div class="lui_solar">初四</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-28"><div class="lui_date_box"><span class="lui_number">28</span><div class="lui_solar">初五</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-29"><div class="lui_date_box"><span class="lui_number">29</span><div class="lui_solar">初六</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date" data-lui-mark="calendar_date" data-lui-date="2022-11-30"><div class="lui_date_box"><span class="lui_number">30</span><div class="lui_solar">初七</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-01"><div class="lui_date_box"><span class="lui_number">1</span><div class="lui_solar">初八</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-02"><div class="lui_date_box"><span class="lui_number">2</span><div class="lui_solar">初九</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-12-03"><div class="lui_date_box"><span class="lui_number">3</span><div class="lui_solar">初十</div></div></td>									</tr>																							<tr class="lui_calendar_portlet_tr last">																									<td class="lui_calendar_portlet_td lui_calendar_portlet_date next muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-12-04"><div class="lui_date_box"><span class="lui_number">4</span><div class="lui_solar">十一</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-05"><div class="lui_date_box"><span class="lui_number">5</span><div class="lui_solar">十二</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-06"><div class="lui_date_box"><span class="lui_number">6</span><div class="lui_solar">十三</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-07"><div class="lui_date_box"><span class="lui_number">7</span><div class="lui_solar lui_solar_term">大雪</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-08"><div class="lui_date_box"><span class="lui_number">8</span><div class="lui_solar">十五</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next" data-lui-mark="calendar_date" data-lui-date="2022-12-09"><div class="lui_date_box"><span class="lui_number">9</span><div class="lui_solar">十六</div></div></td>											<td class="lui_calendar_portlet_td lui_calendar_portlet_date next muiWeekRest" data-lui-mark="calendar_date" data-lui-date="2022-12-10"><div class="lui_date_box"><span class="lui_number">10</span><div class="lui_solar">十七</div></div></td>									</tr>					</tbody>		</table></div><div class="lui_calendar_portlet_footer">	<ul class="lui_calendar_portlet_footer_ul" data-lui-mark="calendar_footer" style="height: 100%;"><li class="lui_calendar_portlet_item_nodata"></li><li class="lui_calendar_portlet_item_nodata_text">暂无工作事项</li></ul></div></div>
+<script type="text/javascript">
+seajs.use( [ 'km/calendar/resource/css/calendar_portletx.css']);
+seajs.use(['lui/jquery','km/calendar/resource/js/calendar_portletx'],function($,Portlet){
+	$(function(){
+		//参数设置
+		var config = {
+			id : 'calendar_luiid75',
+			//根节点,JQuery表达式写法 *
+			element : $('#calendar_luiid75'),
+			rowsize : '6'
+		};
+		var __portlet = new Portlet.CalendarPortlet(config);
+		__portlet.draw();			
+	});
+});
+</script></div></div>
+        
+        
+        
+       </div></div>	<div data-lui-mark="panel.content.operation" class="lui_portlet_operations clearfloat"><a class="lui_portlet_operation lui_portlet_operation_more" data-href="/km/calendar" target="_blank" onclick="Com_OpenNewWindow(this);" style="float:right">更多</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:calendarPortletOpen(&#39;/km/calendar/km_calendar_main/kmCalendarMain.do?method=addNote&#39;,&#39;add&#39;,&#39;note&#39;);" target="_self" style="float:right">新建笔记</a><a class="lui_portlet_operation lui_portlet_operation_create" href="javascript:calendarPortletOpen(&#39;/km/calendar/km_calendar_main/kmCalendarMain.do?method=addEvent&#39;,&#39;add&#39;,&#39;event&#39;);" target="_self" style="float:right">新建 </a>	</div></div></div></div>			</div>		</div>		<div class="lui_panel_footer_l">			<div class="lui_panel_footer_r">				<div class="lui_panel_footer_c">				</div>			</div>		</div>	</div></div>  </td> 
+    </tr> 
+   </tbody> 
+  </table>  
+ 
+		</div>
+		
+		<div id="top" data-lui-type="lui/top!totop" style="" class="lui-component com_goto" data-lui-cid="top" data-lui-parse-init="85">	
+<div class="com_gototop" style="visibility: visible; opacity: 1; bottom: 0px; cursor: pointer;"></div></div>
+		<script src="./工作台（奥瑞金）_files/tTemplate.js"></script>
+	
+
+
+
+
+
+<script type="text/javascript">
+	seajs.use(['lui/jquery'], function( $ ) {
+		// 阻止左侧菜单滚轮滑动至顶部或底部时，右侧window的滚动条跟随滑动
+		$.fn.addMouseWheel = function() {
+		    return $(this).each(function() {
+		        $(this).on("mousewheel DOMMouseScroll", function(event) {
+		            var scrollTop = this.scrollTop,
+		                scrollHeight = this.scrollHeight,
+		                height = this.clientHeight;
+		            var delta = (event.originalEvent.wheelDelta) ? event.originalEvent.wheelDelta : -(event.originalEvent.detail || 0);        
+		            if ((delta > 0 && scrollTop <= delta) || (delta < 0 && scrollHeight - height - scrollTop <= -1 * delta)) {
+		                this.scrollTop = delta > 0? 0: scrollHeight;
+		                // 向上/向下滚
+		                event.preventDefault();
+		            }        
+		        });
+		    });	
+		};
+		$('.lui_list_left_sidebar_frame').addMouseWheel();
+	});	
+	
+</script><div data-lui-type="lui/popup!Popup" style="display: none; background-color: white; position: absolute; z-index: 60;" id="lui-id-2" class="lui-component lui_popup_border_content" data-lui-cid="lui-id-2" data-lui-parse-init="1">	
+
+
+		
+		<script>
+		// 页眉消息提醒国际化语言
+		var theaderMsg = {
+		  "dialog.locale.winTitle" : "请选择场所", // 请选择场所
+		  "authArea.not.found.portalPage.tip" : "场所下未找到可访问的门户页面 ", // 场所下未找到可访问的门户页面 
+		  "home.logout.confirm" : "该操作将退出系统，是否继续？" // 该操作将退出系统，是否继续？
+		};
+		</script>
+		<script type="text/javascript" src="./工作台（奥瑞金）_files/userinfo.js"></script>
+		<div class="lui_uerinfo_popup" style="min-width: 260px;padding: 8px;">
+		 	<table width="100%">
+		 		<tbody><tr>
+		 			<td width="100" valign="top" align="center">
+		 				<img id="__user_info__img__" align="top" style="width: 90px;height: 90px;">
+		 			</td>
+		 			<td>
+		 				<c:if test="true">
+			 						</c:if><table class="lui_info_link_tb" width="100%">
+		 					<tbody><tr>
+		 						<td width="50%" height="25"><a href="http://bpm.orgtech.cn:8088/sys/person" target="_blank"><span class="com_btn_link">个人设置</span></a></td>
+		 						
+		 						
+		 						<td>
+		 							
+		 										<a href="http://bpm.orgtech.cn:8088/sys/zone/index.do?userid=17b2a7a1973d1f4c7bea5f44bb29c1c3" target="_blank"><span class="com_btn_link">个人空间</span></a>
+		 									
+		 						</td>
+		 					
+		 					
+		 					</tr>
+			 				<tr>
+			 					<td height="25"><a href="http://bpm.orgtech.cn:8088/sys/follow/sys_follow_person_doc_related/sysFollowPersonDocRelated_person.jsp" target="_blank"><span class="com_btn_link">我的订阅</span></a></td> 
+			 					<td><a href="javascript:void(0)" onclick="__sys_logout()"><span class="com_btn_link">退出系统</span></a></td>
+			 					
+			 				</tr>
+		 				</tbody></table>
+		 				<div style="height: 5px;border-top: #bbb 1px dotted;"></div>
+		 				<table class="lui_info_post_tb" width="100%">
+		 					
+		 					
+		 					<tbody><tr>
+		 						<td class="lui_userinfo_title" valign="top">岗位：</td>
+		 						<td>
+		 							<div>
+		 							物料描述<br>
+									</div>
+		 						</td>
+		 					</tr>	 					
+		 					
+		 					<tr>
+		 						<td class="lui_userinfo_title" width="40">部门：</td>
+		 						<td><span>销售部</span></td>
+		 					</tr>
+		 					
+		 				</tbody></table>
+		 			</td>
+		 		</tr>
+		 	</tbody></table>
+		</div>
+	</div><div class="lui_dataview_picmenu_popup lui-component lui_popup_border_content" id="lui-id-83" data-lui-cid="lui-id-83" style="background: white; width: 749px; display: none; position: absolute; z-index: 70;"><div title="还款申请" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_86"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">还款申请</div></div></div></div></div><div title="会议管理" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_33"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">会议管理</div></div></div></div></div><div title="发起沟通" class="lui_dataview_picmenu" style="padding-left: 11px; padding-right: 11px;"><div class="lui_dataview_picmenu_left"><div class="lui_dataview_picmenu_right"><div class="lui_dataview_picmenu_content"><div class="lui_icon_l"><div class="lui_icon_l lui_icon_l_icon_36"></div></div><div class="textEllipsis lui_dataview_picmenu_txt">发起沟通</div></div></div></div></div></div></body></html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)http://192.168.31.25/servlet/AdminServlet?function=softwareManager -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Top Drive - Administrative Controls</title>
+        <script type="text/javascript" src="./Top Drive - Administrative Controls_files/ieupdate.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Top Drive - Administrative Controls_files/blue_bar.css">
+    </head>
+    <body onload="document.log.passwd.focus()" bgcolor="#FFFFFF">
+        <div id="blue_bar">
+            <span id="blue_bar_title">Administrative Controls - Top Drive</span>
+            <span id="right_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+
+<table border="0" cellpadding="3" width="400">
+  <tbody><tr>
+    <td>
+      <p>Please enter the administrator's password.</p>
+         <form action="http://192.168.31.25/servlet/AdminLoginServlet?session=forward" method="post" name="log">
+         <p><input type="password" name="passwd" size="16" maxlength="32" onkeydown="if (event.keyCode == 13) document.getElementById(&#39;login&#39;).click()">
+         <input type="hidden" name="servletPath" value="/servlet/AdminServlet">
+         <input type="hidden" name="function" value="softwareManager">
+         <input type="submit" id="login" value="Log In">
+         <input type="reset" value="Clear"></p>
+         </form>
+    </td>
+  </tr>
+</tbody></table>
+        
+        <div id="blue_bar_bottom">
+            <span id="left_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+   
+
+
+</body></html>

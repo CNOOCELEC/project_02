@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://192.168.31.25/page/help/big_varballs/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Big Varballs</title>
+        
+        <script type="text/javascript" src="./Big Varballs_files/ieupdate.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Big Varballs_files/blue_bar.css">
+    </head>
+    <body>
+        <div id="blue_bar">
+            <span id="blue_bar_title">Documentation: Varballs are Too Big - <script language="JavaScript" type="text/javascript" src="./Big Varballs_files/AdminServlet"></script>Top Drive</span>
+            <span id="right_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+        <div>
+            <h2>Varballs are Too Big</h2>
+            <p>In www 1.7, we introduced a different way to organize the 
+                layout of www files on the disk. Instead of mingling www jar 
+                files and other resources with operator screens, we moved all 
+                of the www HTML pages into /varco/www/page. All of the code 
+                files were moved into /varco/www/jar or /varco/www/resource. 
+                No tool files (i.e. nothing that goes into a varball) should 
+                ever be placed into /varco/www/page, /varco/www/jar, 
+                /varco/www/resource or /varco/www/servlet.</p>
+            <p>At about the same time, we started putting JavaScript libraries 
+                into the www so that we could use them for screens that did not 
+                depend on Java applets. We originally used the Dojo JavaScript 
+                library, but the files for this library proved to be quite large. 
+                In www 1.7.3, we switched to the JQuery JavaScript library, 
+                which is quite a bit smaller. Also, in www 1.7.3, we changed 
+                the software installer applet so that it would remove files 
+                from all previous www installations. However, if we have 
+                installed a 1.7.x series www on a controller and then 
+                installed www 1.7.3 or later after that, then we sometimes 
+                see that the Dojo JavaScript library is still present.</p>
+            <p>Because of the way the varball.sh system script works, 
+                when it creates a varball (personality archive), it sometimes 
+                includes the Dojo JavaScript library in the varball. This 
+                can make a varball up to five Megabytes in size.</p>
+            <p>Eventually, we want to modify the varball.sh system script 
+                so that it will not put anything in the page, jar, or 
+                resource directories into a varball. However, before that 
+                happens, we can get very large varballs.</p>
+            <p>In www 1.7.3 and later, the Dojo JavaScript library is not 
+                used. It is contained in the directories 
+                /varco/www/resource/dojo and /varco/www/resource/dijit. 
+                These two directories can be safely removed from the 
+                controller when running www 1.7.3 and later. This will make 
+                varballs that contain them a good deal smaller.</p>
+            <p>In addition, a varball may also contain a copy of Vi, 
+                the data logging graph viewer, from an earlier installation 
+                of the www. This will be in the /varco/www/jar directory. 
+                The name of the file will be something like vi-www-v1_7_1_2.exe. 
+                This file can also be safely removed from the controller and 
+                the varball.</p>
+            <h3>www 1.7.4</h3>
+            <p>In www 1.7.4, when we use the screen command to create a varball, 
+                before anything is created, the /dojo and /dijit directories, 
+                and any previous versions of the Vi application are 
+                automatically deleted first.</p>
+        </div>
+        <div id="blue_bar_bottom">
+            <span id="left_contents_link"><a href="http://192.168.31.25/index.html">Contents</a></span>
+        </div>
+    
+
+</body></html>
